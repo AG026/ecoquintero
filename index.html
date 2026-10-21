@@ -1,0 +1,1459 @@
+<title>EcoQuintero</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+/* Concepto: observatorio ciudadano de bolsillo. Un solo dato grande (nivel de riesgo del sector),
+   una tira semanal para leer los 7 días de un vistazo y todo lo demás debajo, en una columna. */
+:root {
+  --logo: url(data:image/png;base64,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);
+  --font-display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Public Sans', 'Segoe UI', system-ui, sans-serif;
+  --navy: #0E3A5B;
+  --copper: #C8743A;
+  --copper-strong: #A9591F;
+  --copper-ink: #8C4A19;
+  --bg: #F6F8FA;
+  --surface: #FFFFFF;
+  --surface-2: #EDF2F6;
+  --line: #D5DFE7;
+  --fg: #1B2733;
+  --muted: #4F5E6D;
+  --brand: #0E3A5B;
+  --focus: #1F6FC2;
+  --side-bg: #0E3A5B;
+  --side-fg: #EAF1F6;
+  --side-muted: #A8BDCD;
+  --side-active: #1B5079;
+  --sea: #DCEAF2;
+  --land: #ECEFF1; --land-side: #B9C5CE; --sea-deep: #C4D8E5;
+  --road: #FFFFFF;
+  --wet: #7FB5CF;
+  --grey: #8796A4;
+  --good: #3FA34D; --good-bg: #E5F4E8; --good-ink: #1B6428;
+  --mod: #F2C230;  --mod-bg: #FDF3CF;  --mod-ink: #6A5000;
+  --high: #E8821E; --high-bg: #FDE8D3; --high-ink: #864000;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --copper-ink: #EBA56E;
+    --bg: #0C1721; --surface: #13222E; --surface-2: #1B2D3B; --line: #293C4C;
+    --fg: #E4ECF2; --muted: #A2B3C1; --brand: #8FC3E8; --focus: #7DB8F0;
+    --side-bg: #0A2A42; --side-fg: #E4ECF2; --side-muted: #94AABB; --side-active: #14405F;
+    --sea: #11303F; --land: #182733; --road: #22374A; --wet: #2F6C88; --grey: #6F8393; --land-side: #0E1A24; --sea-deep: #091822;
+    --good-bg: #173720; --good-ink: #93D99E;
+    --mod-bg: #3A3210; --mod-ink: #F4D870;
+    --high-bg: #43290E; --high-ink: #F6B573;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --copper-ink: #EBA56E;
+  --bg: #0C1721; --surface: #13222E; --surface-2: #1B2D3B; --line: #293C4C;
+  --fg: #E4ECF2; --muted: #A2B3C1; --brand: #8FC3E8; --focus: #7DB8F0;
+  --side-bg: #0A2A42; --side-fg: #E4ECF2; --side-muted: #94AABB; --side-active: #14405F;
+  --sea: #11303F; --land: #182733; --road: #22374A; --wet: #2F6C88; --grey: #6F8393; --land-side: #0E1A24; --sea-deep: #091822;
+  --good-bg: #173720; --good-ink: #93D99E;
+  --mod-bg: #3A3210; --mod-ink: #F4D870;
+  --high-bg: #43290E; --high-ink: #F6B573;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+html[data-fs="1"] { font-size: 112.5%; }
+html[data-fs="2"] { font-size: 125%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 1rem/1.55 var(--font-body);
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--surface); }
+h1, h2, h3 { font-family: var(--font-display); color: var(--brand); margin: 0; line-height: 1.15; text-wrap: balance; letter-spacing: -0.01em; }
+h1 { font-size: 1.9rem; }
+h1:focus { outline: none; }
+h2 { font-size: 1.3rem; }
+h3 { font-size: 1.05rem; }
+p { margin: 0; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+.tnum { font-variant-numeric: tabular-nums; }
+.eyebrow { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+.muted { color: var(--muted); }
+.small { font-size: .875rem; }
+
+.lv-good { --c: var(--good); --cbg: var(--good-bg); --cink: var(--good-ink); }
+.lv-mod  { --c: var(--mod);  --cbg: var(--mod-bg);  --cink: var(--mod-ink); }
+.lv-high { --c: var(--high); --cbg: var(--high-bg); --cink: var(--high-ink); }
+.lv-none { --c: var(--grey); --cbg: var(--surface-2); --cink: var(--muted); }
+
+/* estructura */
+.shell { min-height: 100vh; display: block; }
+.side { display: none; }
+.topbar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: var(--surface); border-bottom: 1px solid var(--line);
+}
+.topbar-in {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding-block: 10px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wordmark { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; color: var(--brand); letter-spacing: -0.02em; }
+.wordmark i { font-style: normal; color: var(--copper); }
+.tagline { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.main {
+  padding-block: 20px 110px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1000px; margin-inline: auto; display: grid; gap: 20px; min-width: 0; }
+.view { display: grid; gap: 20px; min-width: 0; }
+.view[hidden] { display: none; }
+.pagehead { display: grid; gap: 6px; }
+.pagehead p { color: var(--muted); max-width: 62ch; }
+
+.bottomnav {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 25;
+  background: var(--surface); border-top: 1px solid var(--line);
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px;
+  padding: 6px max(8px, env(safe-area-inset-right, 0px)) calc(6px + env(safe-area-inset-bottom, 0px)) max(8px, env(safe-area-inset-left, 0px));
+}
+.bn {
+  display: grid; justify-items: center; gap: 2px; align-content: center;
+  min-height: 52px; padding: 4px 2px; border: 0; background: none; color: var(--muted);
+  font-size: .72rem; font-weight: 600; border-radius: 10px; min-width: 0;
+}
+.bn svg { width: 24px; height: 24px; }
+.bn[aria-current="page"] { color: var(--brand); background: var(--surface-2); }
+.bn .badge { position: absolute; }
+.bn-wrap { position: relative; display: grid; }
+
+@media (min-width: 900px) {
+  .shell { display: grid; grid-template-columns: 264px 1fr; }
+  .topbar, .bottomnav { display: none; }
+  .side {
+    display: flex; flex-direction: column; gap: 24px; position: sticky; top: 0; height: 100vh;
+    background: var(--side-bg); color: var(--side-fg);
+    padding-block: 28px;
+    padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: 16px;
+  }
+  .side .wordmark { color: #fff; font-size: 1.6rem; }
+  .side .tagline { color: var(--side-muted); }
+  .side nav { display: grid; gap: 4px; }
+  .sn {
+    display: flex; align-items: center; gap: 12px; min-height: 46px; padding: 8px 12px;
+    border: 0; background: none; color: var(--side-fg); border-radius: 10px; text-align: left; font-weight: 500;
+  }
+  .sn svg { width: 22px; height: 22px; flex: none; }
+  .sn:hover { background: var(--side-active); }
+  .sn[aria-current="page"] { background: var(--side-active); font-weight: 700; }
+  .sn .count { margin-left: auto; background: var(--copper); color: #1B1208; border-radius: 99px; padding: 0 8px; font-size: .78rem; font-weight: 700; }
+  .side-foot { margin-top: auto; font-size: .8rem; color: var(--side-muted); display: grid; gap: 6px; }
+  .main { padding-block: 32px 48px; padding-right: max(32px, env(safe-area-inset-right, 0px)); padding-left: 32px; }
+}
+
+/* piezas */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; min-width: 0; }
+.card.flat { background: var(--surface-2); border-color: transparent; }
+.grid2 { display: grid; gap: 16px; grid-template-columns: 1fr; min-width: 0; }
+.grid3 { display: grid; gap: 14px; grid-template-columns: 1fr; min-width: 0; }
+@media (min-width: 720px) { .grid2 { grid-template-columns: 1fr 1fr; } .grid3 { grid-template-columns: repeat(3, 1fr); } }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 10px 18px;
+  border-radius: 10px; border: 1.5px solid transparent; font-weight: 700; text-decoration: none;
+}
+.btn.primary { background: var(--copper-strong); color: #fff; }
+.btn.primary:hover { filter: brightness(1.08); }
+.btn.ghost { background: var(--surface); border-color: var(--line); color: var(--brand); }
+.btn.ghost:hover { background: var(--surface-2); }
+.btn[disabled] { opacity: .5; cursor: not-allowed; }
+.pill {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 99px; font-size: .8rem; font-weight: 700;
+  background: var(--cbg); color: var(--cink);
+}
+.pill svg { width: 15px; height: 15px; }
+.tag { display: inline-flex; padding: 2px 9px; border-radius: 99px; font-size: .75rem; font-weight: 600; background: var(--surface-2); color: var(--muted); }
+
+/* hero */
+.hero { display: grid; gap: 16px; padding: 20px; }
+.hero-top { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; justify-content: space-between; }
+.hero-level { display: flex; align-items: center; gap: 16px; }
+.hero-ico { flex: none; width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center; background: var(--cbg); color: var(--cink); border: 2px solid var(--c); }
+.hero-ico svg { width: 38px; height: 38px; }
+.hero-word { font-family: var(--font-display); font-size: clamp(2.3rem, 9vw, 3.4rem); font-weight: 700; line-height: 1; color: var(--cink); letter-spacing: -0.03em; }
+.hero-sub { font-size: .9rem; color: var(--muted); }
+.advice { background: var(--cbg); color: var(--fg); border-radius: 12px; padding: 14px 16px; display: grid; gap: 4px; }
+.advice strong { color: var(--cink); }
+
+.week { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.day {
+  display: grid; justify-items: center; gap: 4px; padding: 8px 2px 8px; min-height: 76px;
+  border: 1.5px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--fg);
+}
+.day .dw { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; }
+.day .dn { font-weight: 700; font-size: 1.05rem; }
+.day .di { width: 22px; height: 22px; color: var(--cink); }
+.day .di svg { width: 22px; height: 22px; }
+.day.lv-mod, .day.lv-high { background: var(--cbg); border-color: var(--c); }
+.day[aria-pressed="true"] { outline: 3px solid var(--brand); outline-offset: 1px; }
+
+.metric { display: grid; gap: 6px; align-content: start; }
+.metric .m-name { font-weight: 600; }
+.metric .m-val { font-family: var(--font-display); font-size: 2.1rem; font-weight: 700; color: var(--brand); line-height: 1; }
+.metric .m-val small { font-family: var(--font-body); font-size: .8rem; font-weight: 500; color: var(--muted); margin-left: 4px; }
+.spark { width: 100%; height: 30px; display: block; }
+
+.chart { width: 100%; min-height: 240px; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { font-family: var(--font-body); fill: var(--muted); font-size: calc(11px * var(--fsk, 1)); }
+.chart .val { fill: var(--fg); font-weight: 700; paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+.chart .ref { stroke: var(--muted); stroke-dasharray: 5 4; stroke-width: 1.2; fill: none; }
+.chart .reflab { font-size: calc(11px * var(--fsk, 1)); font-weight: 600; paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+.chart .grid { stroke: var(--line); stroke-width: 1; }
+.chart .line { fill: none; stroke: var(--brand); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.chart .pt { cursor: pointer; }
+.readout { min-height: 24px; font-size: .92rem; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .82rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: var(--c); display: inline-block; }
+
+table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.scroll { overflow-x: auto; max-width: 100%; }
+details.acc { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+details.acc > summary { list-style: none; min-height: 48px; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; font-weight: 700; cursor: pointer; color: var(--brand); border-radius: 12px; }
+details.acc > summary::-webkit-details-marker { display: none; }
+details.acc > summary::after { content: "+"; font-size: 1.4rem; line-height: 1; color: var(--copper-ink); }
+details.acc[open] > summary::after { content: "–"; }
+details.acc > .acc-body { padding: 0 16px 16px; display: grid; gap: 10px; }
+.acc-body ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 6px; }
+
+.notice { display: flex; gap: 10px; align-items: flex-start; font-size: .88rem; color: var(--muted); background: var(--surface-2); border-radius: 10px; padding: 12px 14px; }
+.notice svg { width: 18px; height: 18px; flex: none; margin-top: 2px; }
+
+/* mapa */
+.mapbox { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--sea); }
+.mapbox svg { display: block; width: 100%; height: auto; }
+.mapbox text { font-family: var(--font-body); }
+.zone { font-size: 20px; font-weight: 600; fill: var(--fg); paint-order: stroke; stroke: var(--land); stroke-width: 5px; }
+.zone.sea { fill: var(--muted); font-style: italic; stroke: none; letter-spacing: .15em; font-weight: 500; }
+.stn { cursor: pointer; }
+.stn:focus-visible { outline: none; }
+.stn:focus-visible .halo { stroke: var(--focus); stroke-width: 4; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  min-height: 44px; padding: 8px 14px; border-radius: 99px; border: 1.5px solid var(--line); background: var(--surface);
+  font-weight: 600; color: var(--fg);
+}
+.chip[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: var(--surface); }
+:root[data-theme="dark"] .chip[aria-pressed="true"] { color: #0C1721; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .chip[aria-pressed="true"] { color: #0C1721; } }
+.plist { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.plist li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.plist li:last-child { border-bottom: 0; }
+
+/* alertas */
+.alert { display: grid; gap: 8px; padding: 16px; border-left: 0; }
+.alert-top { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.alert .date { font-weight: 700; color: var(--brand); }
+
+/* formulario */
+form { display: grid; gap: 18px; }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field label, .field legend { font-weight: 600; }
+.field .hint { font-size: .85rem; color: var(--muted); }
+.field .err { font-size: .88rem; color: var(--high-ink); font-weight: 600; min-height: 0; }
+.field .err:empty { display: none; }
+.input, select.input, textarea.input {
+  width: 100%; min-height: 48px; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--fg);
+}
+textarea.input { min-height: 112px; resize: vertical; }
+.input[aria-invalid="true"] { border-color: var(--high); }
+fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.seg { display: flex; flex-wrap: wrap; gap: 8px; }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label { min-height: 44px; display: inline-flex; align-items: center; padding: 8px 16px; border-radius: 99px; border: 1.5px solid var(--line); background: var(--surface); font-weight: 600; cursor: pointer; }
+.seg input:checked + label { background: var(--brand); border-color: var(--brand); color: var(--surface); }
+:root[data-theme="dark"] .seg input:checked + label { color: #0C1721; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .seg input:checked + label { color: #0C1721; } }
+.seg input:focus-visible + label { outline: 3px solid var(--focus); outline-offset: 2px; }
+.switch { display: flex; gap: 14px; align-items: flex-start; padding: 14px; border: 1.5px solid var(--line); border-radius: 12px; background: var(--surface-2); }
+.switch input { position: absolute; opacity: 0; pointer-events: none; }
+.switch .track { flex: none; width: 52px; height: 30px; border-radius: 99px; background: var(--grey); position: relative; margin-top: 2px; }
+.switch .track::after { content: ""; position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: #fff; transition: transform .15s; }
+.switch input:checked + .track { background: var(--good-ink); }
+:root[data-theme="dark"] .switch input:checked + .track { background: #3F9B4D; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .switch input:checked + .track { background: #3F9B4D; } }
+.switch input:checked + .track::after { transform: translateX(22px); }
+.switch input:focus-visible + .track { outline: 3px solid var(--focus); outline-offset: 2px; }
+.switch .stx { display: grid; gap: 2px; }
+.check { display: flex; gap: 12px; align-items: flex-start; }
+.check input { width: 24px; height: 24px; flex: none; margin-top: 2px; accent-color: var(--copper-strong); }
+.photo-prev { display: flex; gap: 12px; align-items: center; }
+.photo-prev img { width: 84px; height: 84px; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); }
+.mine { display: grid; gap: 10px; }
+.mine-item { display: grid; gap: 4px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.mine-item .row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center; }
+.btn.small { min-height: 40px; padding: 6px 12px; font-size: .9rem; }
+.btn.danger { background: var(--surface); border-color: var(--line); color: var(--high-ink); }
+
+.figs { display: grid; gap: 14px; grid-template-columns: 1fr; }
+@media (min-width: 720px) { .figs { grid-template-columns: repeat(3, 1fr); } }
+.fig .n { font-family: var(--font-display); font-size: 2.3rem; font-weight: 700; color: var(--brand); line-height: 1; }
+.fig .l { color: var(--muted); font-size: .92rem; margin-top: 6px; }
+
+/* hoja "Más" */
+.sheet-back { position: fixed; inset: 0; z-index: 40; background: rgba(8, 18, 28, .55); display: flex; align-items: flex-end; }
+.sheet-back[hidden] { display: none; }
+.sheet { width: 100%; background: var(--surface); border-radius: 18px 18px 0 0; padding: 18px max(16px, env(safe-area-inset-right, 0px)) calc(18px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); display: grid; gap: 8px; }
+.sheet button.sl { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 10px 12px; border: 0; background: var(--surface-2); border-radius: 12px; font-weight: 600; text-align: left; color: var(--fg); }
+.sheet button.sl svg { width: 22px; height: 22px; color: var(--brand); }
+.foot { font-size: .82rem; color: var(--muted); display: grid; gap: 4px; padding-top: 8px; }
+
+/* identidad: curvas de nivel, barras semanales, pasos, modo test */
+.hero { position: relative; overflow: hidden; }
+.hero > *:not(.contour) { position: relative; z-index: 1; }
+.contour { position: absolute; right: -8%; top: 0; width: 85%; height: 100%; color: var(--c); opacity: .25; pointer-events: none; z-index: 0; }
+.contour path { fill: none; stroke: currentColor; stroke-width: 1.4; }
+.side { position: sticky; overflow: hidden; }
+.sidecontour { position: absolute; left: 0; bottom: 0; width: 100%; height: 260px; color: var(--side-muted); opacity: .22; pointer-events: none; }
+.sidecontour path { fill: none; stroke: currentColor; stroke-width: 1.2; }
+.side > *:not(.sidecontour) { position: relative; z-index: 1; }
+.day { min-height: 104px; }
+.day .bw { height: 26px; display: flex; align-items: flex-end; }
+.day .bar { width: 10px; border-radius: 3px 3px 0 0; background: var(--c); }
+.eyebrow::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--copper); margin-right: 8px; vertical-align: 1px; }
+.stepbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-weight: 700; color: var(--brand); }
+.stepdots { display: flex; gap: 6px; }
+.stepdots i { width: 34px; height: 6px; border-radius: 99px; background: var(--line); }
+.stepdots i.on { background: var(--copper); }
+.step { display: grid; gap: 18px; }
+.step[hidden] { display: none; }
+.step h2:focus { outline: none; }
+.navrow { display: flex; flex-wrap: wrap; gap: 10px; }
+.recap { background: var(--surface-2); border-radius: 10px; padding: 12px 14px; font-size: .92rem; }
+.tcard { display: grid; gap: 12px; }
+.tsay { background: var(--surface-2); border-radius: 10px; padding: 12px 14px; }
+.ttimer { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.ttimer output { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 1.2rem; min-width: 5ch; color: var(--brand); }
+
+/* tarjetas de buenas prácticas */
+.tip { display: grid; gap: 10px; align-content: start; }
+.tip .ico { width: 46px; height: 46px; border-radius: 12px; background: var(--surface-2); color: var(--copper-ink); display: grid; place-items: center; }
+.tip .ico svg { width: 24px; height: 24px; }
+.tip h3 { margin-top: 6px; }
+.tip p { color: var(--muted); font-size: .95rem; }
+/* mapa: modo 2D / relieve 3D */
+.mapbox { position: relative; }
+.mapzoom { transform-origin: var(--ox, 50%) var(--oy, 50%); transform: scale(var(--z, 1)); transition: transform .25s; }
+.mapmode { position: absolute; left: 10px; top: 10px; z-index: 5; display: flex; background: var(--surface); border-radius: 10px; box-shadow: 0 1px 6px rgba(0,0,0,.28); overflow: hidden; }
+.mapmode button { min-height: 42px; padding: 6px 14px; border: 0; background: none; font-weight: 700; color: var(--fg); }
+.mapmode button[aria-pressed="true"] { background: var(--brand); color: var(--surface); }
+.mapctl { position: absolute; right: 10px; bottom: 10px; z-index: 5; display: grid; background: var(--surface); border-radius: 10px; box-shadow: 0 1px 6px rgba(0,0,0,.28); overflow: hidden; }
+.mapctl button { width: 44px; height: 44px; border: 0; background: none; font-size: 1.5rem; font-weight: 700; color: var(--fg); line-height: 1; }
+.mapctl button + button { border-top: 1px solid var(--line); }
+.mapctl button[disabled] { opacity: .35; cursor: not-allowed; }
+.compass { position: absolute; right: 10px; top: 10px; z-index: 5; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--surface); box-shadow: 0 1px 6px rgba(0,0,0,.28); display: grid; place-items: center; color: var(--brand); }
+.compass[hidden] { display: none; }
+.compass svg { width: 26px; height: 26px; transform: rotate(var(--rz, 0deg)); transition: transform .15s; }
+.scene { position: relative; aspect-ratio: 640 / 450; perspective: 1000px; overflow: hidden; background: var(--sea-deep); }
+.plane { position: absolute; inset: 0; transform-style: preserve-3d; transform: rotateX(55deg) rotateZ(var(--rz, 0deg)) scale(.74); }
+.lyr { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.pa { position: absolute; width: 0; height: 0; transform: translateZ(26px) rotateZ(calc(var(--rz, 0deg) * -1)) rotateX(-55deg); }
+.pc { position: absolute; bottom: 0; left: 0; transform: translateX(-50%); }
+.pl { position: absolute; top: -34px; left: 24px; white-space: nowrap; font-size: 12px; font-weight: 700; color: var(--fg); text-shadow: 0 0 3px var(--land), 0 0 3px var(--land), 0 0 5px var(--land); pointer-events: none; }
+button.p3 { position: relative; display: block; width: 34px; height: calc(var(--h, 30px) + 30px); border: 0; background: none; padding: 0; }
+.p3 .col { position: absolute; left: 12px; bottom: 0; width: 10px; height: var(--h, 30px); border-radius: 3px; background: linear-gradient(90deg, var(--c), color-mix(in srgb, var(--c) 55%, #000)); }
+.p3 .cap { position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--cbg); border: 3px solid var(--c); color: var(--cink); display: grid; place-items: center; }
+.p3 .cap svg { width: 18px; height: 18px; }
+.p3.sel .cap { outline: 3px solid var(--brand); outline-offset: 2px; }
+.p3.off { height: 24px; }
+.p3.off .cap { top: auto; bottom: 0; width: 22px; height: 22px; left: 6px; border: 2px dashed var(--grey); background: var(--surface); }
+.rp { position: absolute; bottom: 0; left: 0; transform: translateX(-50%); width: 14px; height: 18px; pointer-events: none; }
+.rp::before { content: ""; position: absolute; left: 5px; top: 10px; width: 4px; height: 8px; background: var(--copper); }
+.rp::after { content: ""; position: absolute; left: 0; top: 0; width: 14px; height: 14px; background: var(--copper); border: 2px solid var(--surface); transform: rotate(45deg); }
+
+/* formulario de reporte (una sola pantalla) */
+.fhead { display: flex; gap: 14px; align-items: center; }
+.fhead .ico { flex: none; width: 46px; height: 46px; border-radius: 12px; background: var(--surface-2); color: var(--copper-ink); display: grid; place-items: center; }
+.fhead .ico svg { width: 24px; height: 24px; }
+.req { color: var(--high-ink); font-weight: 700; }
+.sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; opacity: 0; }
+.lbl { font-weight: 600; }
+.dropwrap { position: relative; }
+.drop { display: grid; justify-items: center; align-content: center; gap: 6px; min-height: 150px; padding: 16px; text-align: center; border: 2px dashed var(--line); border-radius: 12px; background: var(--surface-2); color: var(--fg); cursor: pointer; }
+.drop svg { width: 28px; height: 28px; color: var(--copper-ink); }
+.drop:hover { border-color: var(--copper); }
+.dropwrap input:focus-visible + .drop { outline: 3px solid var(--focus); outline-offset: 2px; }
+.privbox { display: grid; gap: 14px; padding: 16px; border: 1.5px solid var(--line); border-radius: 12px; background: var(--surface-2); }
+.privbox ul.plain { margin: 0; padding-left: 1.1rem; display: grid; gap: 8px; font-size: .92rem; }
+.btn.block { width: 100%; }
+#e-form { color: var(--high-ink); font-weight: 600; }
+#e-form:empty { display: none; }
+
+.logo { display: inline-block; flex: none; width: 46px; height: 46px; background-color: currentColor; -webkit-mask: var(--logo) center / contain no-repeat; mask: var(--logo) center / contain no-repeat; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand .logo { color: var(--brand); }
+.side .brand .logo { color: #fff; width: 60px; height: 60px; }
+@media (max-width: 480px) { .tl-top { display: none; } }
+
+.homehead { display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: flex-start; justify-content: space-between; }
+.datepick { display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 4px 6px 4px 12px; color: var(--muted); }
+.datepick svg { width: 18px; height: 18px; flex: none; }
+.datepick select.input { min-height: 40px; width: auto; border: 0; background: transparent; font-weight: 600; padding-block: 6px; }
+.banner { position: relative; overflow: hidden; border-radius: 16px; padding: 26px 22px; display: grid; gap: 8px; color: #fff; background: linear-gradient(120deg, var(--side-bg), var(--side-active)); }
+.banner > *:not(.bn-contour):not(.bn-logo) { position: relative; z-index: 1; }
+.bn-contour { position: absolute; inset: 0; width: 100%; height: 100%; color: #fff; opacity: .16; pointer-events: none; }
+.bn-contour path { fill: none; stroke: currentColor; stroke-width: 1.4; }
+.bn-logo { position: absolute; right: 18px; bottom: -14px; width: 150px; height: 150px; color: #fff; opacity: .14; }
+.bn-eyebrow { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; color: #CFE0EC; }
+.banner h2 { color: #fff; font-size: clamp(1.5rem, 5.5vw, 2.1rem); max-width: 18ch; }
+.banner p { color: #E1ECF4; font-size: .92rem; max-width: 46ch; }
+.infostrip { display: flex; gap: 12px; align-items: flex-start; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.infostrip svg { width: 20px; height: 20px; flex: none; margin-top: 2px; color: var(--muted); }
+.infostrip > div { display: grid; gap: 2px; }
+
+.pgrid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); min-width: 0; }
+.pcard { display: grid; gap: 12px; align-content: start; }
+.pcard .ptop { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.pcard .ico { width: 42px; height: 42px; border-radius: 12px; background: var(--surface-2); color: var(--copper-ink); display: grid; place-items: center; }
+.pcard .ico svg { width: 22px; height: 22px; }
+.pcard h3 { font-size: 1.05rem; }
+.pval { font-family: var(--font-display); font-size: 2.1rem; font-weight: 700; color: var(--brand); line-height: 1; }
+.pval small { font-family: var(--font-body); font-size: .8rem; font-weight: 500; color: var(--muted); margin-left: 4px; }
+.pnote { background: var(--cbg, var(--surface-2)); border-radius: 10px; padding: 10px 12px; font-size: .92rem; }
+.pcard p { font-size: .92rem; color: var(--muted); }
+.pcard p strong { color: var(--fg); }
+
+.minis { display: grid; border-top: 1px solid var(--line); }
+details.mini { border-bottom: 1px solid var(--line); }
+details.mini > summary { list-style: none; min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 10px; font-weight: 600; color: var(--brand); cursor: pointer; border-radius: 6px; }
+details.mini > summary::-webkit-details-marker { display: none; }
+details.mini > summary::after { content: "+"; font-size: 1.3rem; color: var(--copper-ink); line-height: 1; }
+details.mini[open] > summary::after { content: "–"; }
+details.mini > p { padding-bottom: 12px; }
+
+.hero-date { display: grid; gap: 2px; }
+.hero-date strong { font-family: var(--font-display); font-size: 1.15rem; color: var(--fg); }
+.peakbtn { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 48px; margin-top: 10px; padding: 10px 14px; text-align: left; background: var(--surface); border: 1.5px solid var(--line); border-radius: 12px; color: var(--fg); }
+.peakbtn .go { flex: none; font-weight: 700; color: var(--copper-ink); text-decoration: underline; }
+details.acc.priv { border-color: var(--copper); background: color-mix(in srgb, var(--copper) 9%, var(--surface)); }
+details.acc.priv > summary { color: var(--copper-ink); }
+.privsum { display: inline-flex; align-items: center; gap: 10px; }
+.privsum svg { width: 22px; height: 22px; flex: none; }
+.linkbtn { background: none; border: 0; padding: 8px 0; min-height: 44px; color: var(--copper-ink); font-weight: 700; text-decoration: underline; text-align: left; }
+@media (max-width: 899px) { [data-view="inicio"] > .hero { order: -2; } [data-view="inicio"] > .weekwrap { order: -1; } }
+
+.fsctl { display: inline-flex; gap: 6px; }
+.fsbtn { min-width: 44px; min-height: 44px; border-radius: 10px; border: 1.5px solid var(--line); background: var(--surface); color: var(--brand); font-weight: 700; font-size: 1rem; }
+.fsbtn[disabled] { opacity: .4; cursor: not-allowed; }
+.side .fsbtn { background: transparent; color: var(--side-fg); border-color: var(--side-active); }
+.intro { display: grid; gap: 10px; border-color: var(--copper); }
+.intro ol { margin: 0; padding-left: 1.2rem; display: grid; gap: 6px; }
+.rowbtns { display: flex; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 899px) { [data-view="inicio"] > .homehead { order: -4; } [data-view="inicio"] > .intro { order: -3; } }
+
+.lastdot { width: 6px; height: 6px; border-radius: 50%; background: var(--copper); }
+#safety { border: 2px solid var(--copper); background: var(--surface); }
+#safety h3 { color: var(--copper-ink); }
+
+.about { display: grid; gap: 10px; border-left: 4px solid var(--copper); }
+.about p { max-width: 70ch; }
+.about-list { margin: 0; padding-left: 1.2rem; display: grid; gap: 6px; }
+.tips-anim .tip .ico { position: relative; width: 54px; height: 54px; border-radius: 16px; background: var(--surface-2); }
+.tips-anim .tip .ico svg { width: 28px; height: 28px; }
+.tips-anim .tip .ico::after { content: ""; position: absolute; inset: 0; border-radius: inherit; border: 2px solid var(--copper); opacity: 0; animation: ico-ring 2.8s ease-out infinite; }
+.tips-anim .tip:nth-child(2) .ico::after { animation-delay: .7s; }
+.tips-anim .tip:nth-child(3) .ico::after { animation-delay: 1.4s; }
+.tips-anim .tip:nth-child(4) .ico::after { animation-delay: 2.1s; }
+.tips-anim .tip:nth-child(1) .ico svg { animation: ico-swing 3s ease-in-out infinite; transform-origin: 50% 20%; }
+.tips-anim .tip:nth-child(2) .ico svg { animation: ico-bounce 2.4s ease-in-out infinite; }
+.tips-anim .tip:nth-child(3) .ico svg { animation: ico-pulse 2.2s ease-in-out infinite; }
+.tips-anim .tip:nth-child(4) .ico svg { animation: ico-wiggle 3.2s ease-in-out infinite; }
+.tips-anim .tip { transition: transform .2s, box-shadow .2s; }
+.tips-anim .tip:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,.12); }
+@keyframes ico-ring { 0% { transform: scale(1); opacity: .7; } 70%, 100% { transform: scale(1.45); opacity: 0; } }
+@keyframes ico-swing { 0%, 100% { transform: rotate(-10deg); } 50% { transform: rotate(10deg); } }
+@keyframes ico-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes ico-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.18); } }
+@keyframes ico-wiggle { 0%, 80%, 100% { transform: rotate(0); } 85% { transform: rotate(-8deg); } 92% { transform: rotate(8deg); } }
+@media (prefers-reduced-motion: reduce) { .tips-anim .tip .ico svg, .tips-anim .tip .ico::after { animation: none !important; } .tips-anim .tip:hover { transform: none; } }
+
+.care { align-items: start; }
+.care details.acc > summary { justify-content: flex-start; align-items: flex-start; padding: 14px 16px; }
+.care details.acc > summary::after { margin-left: auto; }
+.sum-ico { flex: none; width: 40px; height: 40px; border-radius: 12px; background: var(--surface-2); color: var(--copper-ink); display: grid; place-items: center; }
+.sum-ico svg { width: 22px; height: 22px; }
+.sum-t { display: grid; gap: 2px; }
+.sum-t small { font-weight: 400; color: var(--muted); font-size: .85rem; }
+
+.bn-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+.bn-brand .logo { width: 56px; height: 56px; color: var(--brand); flex: none; }
+.bn-word { font-family: var(--font-display, inherit); font-weight: 800; font-size: 1.7rem; letter-spacing: -.01em; color: var(--brand); }
+.bn-word i { color: var(--copper); font-style: normal; }
+.care { align-items: stretch; margin-top: 8px; }
+.care > details.acc { height: 100%; }
+h2.care-h { margin-top: 28px; }
+.bn-brand.top { gap: 16px; margin-bottom: 12px; }
+.bn-brand.top .logo { width: 88px; height: 88px; }
+.bn-brand.top .bn-word { font-size: clamp(2.4rem, 5vw, 3.4rem); line-height: 1; }
+@media (max-width: 899px) { .bn-brand.top { display: none; } }
+
+.themebtn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 0 12px; }
+.themebtn svg { width: 20px; height: 20px; }
+.themebtn .i-sun { display: none; }
+html.is-dark .themebtn .i-sun { display: inline; }
+html.is-dark .themebtn .i-moon { display: none; }
+.topbar .themelab { display: none; }
+.side .fsctl { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; }
+.side .fsctl .fsbtn { width: 100%; justify-content: center; }
+.side .themebtn { grid-column: 1 / -1; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+
+<div class="shell">
+  <aside class="side" aria-label="Navegación principal">
+    <svg class="sidecontour" viewBox="0 0 400 260" preserveAspectRatio="none" aria-hidden="true"><path d="M-20 60 C 60 30 120 80 200 50 S 340 0 420 30"/><path d="M-20 85 C 60 55 120 105 200 75 S 340 25 420 55"/><path d="M-20 110 C 60 80 120 130 200 100 S 340 50 420 80"/><path d="M-20 135 C 60 105 120 155 200 125 S 340 75 420 105"/><path d="M-20 160 C 60 130 120 180 200 150 S 340 100 420 130"/><path d="M-20 185 C 60 155 120 205 200 175 S 340 125 420 155"/><path d="M-20 210 C 60 180 120 230 200 200 S 340 150 420 180"/></svg>
+    <div class="brand">
+      <span class="logo" role="img" aria-label="Logo de EcoQuintero: una nutria entre olas"></span>
+      <div>
+        <div class="wordmark">EcoQuintero<i>.</i></div>
+        <div class="tagline">Territorio que cuidamos</div>
+      </div>
+    </div>
+    <nav id="sidenav"></nav>
+    <div class="side-foot">
+      <span>Apariencia</span><div class="fsctl"><button type="button" class="fsbtn themebtn" data-theme-toggle aria-label="Cambiar entre modo claro y oscuro"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="themelab"></span></button></div>
+      <span>Tamaño del texto</span><div class="fsctl" role="group" aria-label="Tamaño del texto"><button type="button" class="fsbtn" data-fsd="-1" aria-label="Reducir el tamaño del texto">A−</button><button type="button" class="fsbtn" data-fsd="1" aria-label="Aumentar el tamaño del texto">A+</button></div>
+      <span>Quintero y Puchuncaví, Región de Valparaíso</span>
+      <span>Prototipo V2 · Team Chungungos</span>
+    </div>
+  </aside>
+
+  <div>
+    <header class="topbar">
+      <div class="topbar-in">
+        <div class="brand">
+          <span class="logo" role="img" aria-label="Logo de EcoQuintero"></span>
+          <div class="wordmark">EcoQuintero<i>.</i></div>
+        </div>
+        <div class="fsctl" role="group" aria-label="Apariencia y tamaño del texto"><button type="button" class="fsbtn themebtn" data-theme-toggle aria-label="Cambiar entre modo claro y oscuro"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="themelab"></span></button><button type="button" class="fsbtn" data-fsd="-1" aria-label="Reducir el tamaño del texto">A−</button><button type="button" class="fsbtn" data-fsd="1" aria-label="Aumentar el tamaño del texto">A+</button></div>
+      </div>
+    </header>
+
+    <main class="main" id="main">
+      <div class="wrap">
+
+        <!-- INICIO -->
+        <section class="view" data-view="inicio" aria-labelledby="t-inicio">
+          <div class="bn-brand top"><span class="logo" role="img" aria-label="Logo de EcoQuintero"></span><span class="bn-word">EcoQuintero<i>.</i></span></div>
+          <div class="homehead">
+            <div class="pagehead">
+              <span class="eyebrow">Calidad del aire · Estación Centro Quintero</span>
+              <h1 id="t-inicio" tabindex="-1">Promedios diarios de calidad del aire</h1>
+              <p id="home-sub"></p>
+            </div>
+            <div class="rowbtns"><button type="button" class="btn ghost small" id="introopen">Guía rápida</button>
+            <div class="datepick">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <label for="daysel" class="sr">Fecha del dato</label>
+              <select id="daysel" class="input"></select>
+            </div></div>
+          </div>
+          <div class="banner">
+            <svg class="bn-contour" viewBox="0 0 600 200" preserveAspectRatio="xMaxYMid slice" aria-hidden="true"><path d="M-20 40 C 100 0 220 70 330 35 S 520 -30 640 10"/><path d="M-20 70 C 100 30 220 100 330 65 S 520 0 640 40"/><path d="M-20 100 C 100 60 220 130 330 95 S 520 30 640 70"/><path d="M-20 130 C 100 90 220 160 330 125 S 520 60 640 100"/><path d="M-20 160 C 100 120 220 190 330 155 S 520 90 640 130"/><path d="M-20 190 C 100 150 220 220 330 185 S 520 120 640 160"/></svg>
+            <span class="bn-eyebrow">Datos públicos del Ministerio del Medio Ambiente</span>
+            <h2>Información clara para respirar con más conciencia.</h2>
+            <p>Promedios diarios cargados desde el portal SINCA.<br>Último dato disponible: <span id="banner-date"></span>.</p>
+          </div>
+          <section class="card about" aria-labelledby="about-h">
+            <h2 id="about-h">¿Qué es EcoQuintero y para qué sirve?</h2>
+            <p>EcoQuintero es una plataforma ciudadana que muestra, en lenguaje simple, cómo está el aire en Quintero y Puchuncaví, usando datos públicos del Ministerio del Medio Ambiente (SINCA).</p>
+            <ul class="about-list">
+              <li><strong>Entender:</strong> cada día tiene un nivel (Bueno, Moderado o Alto) y una recomendación.</li>
+              <li><strong>Seguir:</strong> la tira de 7 días, el mapa y las estadísticas muestran cómo cambia el aire.</li>
+              <li><strong>Reportar:</strong> puedes dejar constancia de un problema ambiental, de forma anónima.</li>
+            </ul>
+            <p class="muted small">Es un prototipo académico: usa datos preliminares de una estación y no reemplaza los avisos oficiales.</p>
+          </section>
+          <div class="card intro" id="intro" hidden>
+            <h2>¿Cómo usar EcoQuintero?</h2>
+            <ol>
+              <li><strong>Mira el nivel del día:</strong> Bueno, Moderado o Alto dice qué tan limpio está el aire hoy en Quintero.</li>
+              <li><strong>Cambia de día</strong> con la fecha de arriba o con la tira de los 7 días.</li>
+              <li><strong>¿Viste algo raro?</strong> Repórtalo en "Reportar problema". Puede ser anónimo.</li>
+            </ol>
+            <div><button type="button" class="btn primary small" id="introok">Entendido</button></div>
+          </div>
+          <div class="infostrip" role="note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+            <div><strong id="info-line"></strong><span class="small muted">Estado en SINCA: no validado. El valor puede ser corregido posteriormente por la autoridad.</span></div>
+          </div>
+          
+          <div class="card hero" id="hero"></div>
+          <div class="weekwrap">
+            <h2 class="small" style="font-family:var(--font-body);font-size:.95rem;color:var(--fg);margin-bottom:8px;">Los últimos 7 días. Toca un día para ver su detalle. La barra muestra el polvo fino (MP2,5) de ese día. El punto cobre marca el último dato disponible.</h2>
+            <div class="week" id="week" role="group" aria-label="Días de la semana"></div>
+            <button type="button" class="peakbtn" id="peakbtn"></button>
+          </div>
+          <div class="grid3" id="metrics"></div>
+          <details class="acc">
+            <summary>¿Cómo leer estos valores?</summary>
+            <div class="acc-body">
+              <ul>
+                <li><strong>µg/m³</strong> (microgramos por metro cúbico): cuánto polvo hay en un metro cúbico de aire. Mientras más alto el número, más polvo.</li>
+                <li><strong>ppb</strong> (partes por mil millones) y <strong>ppm</strong> (partes por millón): cuánta cantidad de un gas hay en el aire. Son cantidades muy pequeñas.</li>
+                <li><strong>Líneas de referencia:</strong> 15 es la guía de la OMS y 50 es la norma chilena para el polvo fino. Sirven para comparar: bajo 15 es Bueno, entre 15 y 50 es Moderado y sobre 50 es Alto.</li>
+              </ul>
+            </div>
+          </details>
+          <div class="card" style="display:grid;gap:12px;">
+            <div>
+              <h2>Polvo fino (MP2,5) esta semana</h2>
+              <p class="muted small">Cada punto es el promedio de un día, en µg/m³. Toca un punto para ver su valor. Las líneas punteadas son valores de referencia.</p>
+            </div>
+            <div class="chart" data-chart="mp25" data-sel="home"></div>
+            <div class="readout" id="home-readout" aria-live="polite"></div>
+            <div class="legend"><span><span class="dot lv-good"></span>Bueno (hasta 15)</span><span><span class="dot lv-mod"></span>Moderado (más de 15)</span><span><span class="dot lv-high"></span>Alto (más de 50)</span></div>
+          </div>
+          <details class="acc">
+            <summary>Ver todos los parámetros medidos</summary>
+            <div class="acc-body">
+              <div class="scroll"><table id="alltable"></table></div>
+              <p class="muted small">Solo el polvo fino y el polvo respirable tienen nivel de riesgo en esta versión. Los demás se muestran con su valor y una explicación simple.</p>
+            </div>
+          </details>
+          <div class="notice" role="note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+            <span>Dato preliminar, sin validar, de la red SINCA del Ministerio del Medio Ambiente (estación Centro Quintero). Es un promedio del día: pueden ocurrir peaks de pocas horas que este valor no muestra. Ante una emergencia real, sigue las indicaciones de las autoridades.</span>
+          </div>
+          <div class="rowbtns"><button class="btn primary" data-go="reportar">Reportar un problema</button><button class="btn ghost" data-go="ayudar">Cómo puedo ayudar</button></div>
+        </section>
+
+        <!-- MAPA -->
+        <section class="view" data-view="mapa" aria-labelledby="t-mapa" hidden>
+          <div class="pagehead">
+            <span class="eyebrow">Observatorio ambiental ciudadano</span>
+            <h1 id="t-mapa" tabindex="-1">Mapa ambiental</h1>
+            <p>Toca una estación para ver qué se mide ahí, o un rombo cobre para ver un reporte ciudadano. Solo Centro Quintero tiene datos cargados en esta demo.</p>
+          </div>
+          <div class="chips" role="group" aria-label="Capas del mapa" id="layers"></div>
+          <div class="card flat" style="display:grid;gap:8px;"><strong>Cómo leer el mapa</strong>
+            <div class="legend" id="maplegend"><span><span class="dot lv-good"></span>Estación: aire Bueno</span><span><span class="dot lv-mod"></span>Estación: Moderado</span><span><span class="dot lv-high"></span>Estación: Alto</span><span><span class="dot" style="background:transparent;border:2px dashed var(--grey)"></span>Estación sin datos cargados</span><span><svg width="12" height="16" viewBox="0 0 14 24" aria-hidden="true"><path d="M7 0l7 12-7 12-7-12z" fill="var(--copper)"/></svg>Reporte ciudadano (tócalo)</span><span><span class="dot" style="background:var(--wet)"></span>Humedal (ilustrativo)</span></div></div>
+          <div class="mapbox" id="mapbox">
+            <div class="mapzoom" id="mapzoom"><div id="map"></div></div>
+            <div class="mapctl"><button type="button" id="zin" aria-label="Acercar">+</button><button type="button" id="zout" aria-label="Alejar" disabled>−</button></div>
+          </div>
+          
+          
+          <p class="muted small">Mapa esquemático, sin escala: las posiciones son aproximadas. Los reportes ciudadanos se ubican por sector, no en un punto exacto.</p>
+          <div class="card" id="stationpanel" aria-live="polite"></div>
+        </section>
+
+        <!-- ALERTAS -->
+        <section class="view" data-view="alertas" aria-labelledby="t-alertas" hidden>
+          <div class="pagehead">
+            <span class="eyebrow">Observatorio ambiental ciudadano</span>
+            <h1 id="t-alertas" tabindex="-1">Alertas</h1>
+            <p>Se crea una alerta cuando el promedio diario supera la guía de la OMS. Las alertas salen solo de los datos de SINCA cargados.</p>
+          </div>
+          <div class="chips" role="group" aria-label="Filtrar por nivel" id="alertfilters"></div>
+          <div class="view" id="alertlist" style="gap:12px;"></div>
+          <div class="notice" role="note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+            <span>¿Buscas el reporte que enviaste? Los reportes ciudadanos no aparecen aquí: están en el <button type="button" class="linkbtn" data-go="mapa" style="min-height:0;padding:0;">Mapa ambiental</button> (rombos cobre) y en Reportar problema.</span>
+          </div>
+          <div class="notice" role="note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+            <span>Datos preliminares de SINCA, sin validar. Estas alertas no son oficiales. Ante una emergencia real, sigue las indicaciones de las autoridades.</span>
+          </div>
+        </section>
+
+        <!-- REPORTAR -->
+        <section class="view" data-view="reportar" aria-labelledby="t-reportar" hidden>
+          <div class="pagehead">
+            <span class="eyebrow">Observatorio ambiental ciudadano</span>
+            <h1 id="t-reportar" tabindex="-1">Reportar un problema</h1>
+            <p>Tu mirada importa. Puedes reportar de forma anónima y sin dar tu dirección.</p>
+          </div>
+
+          <div class="grid2" id="reportgrid" style="align-items:start;">
+            <div class="card" id="formcard">
+              <form id="reportform" novalidate>
+                <div class="fhead">
+                  <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 12v6M9 15h6"/></svg></div>
+                  <div><h2>Cuéntanos qué está pasando</h2><p class="muted small">Este prototipo guarda tu observación solo en este dispositivo.</p></div>
+                </div>
+                <div class="field">
+                  <label for="f-type">Tipo de problema <span class="req" aria-hidden="true">*</span><span class="sr"> (obligatorio)</span></label>
+                  <select id="f-type" class="input" aria-describedby="e-type" required>
+                    <option value="">Selecciona una opción</option>
+<option>Mal olor o humo</option>
+<option>Calidad del aire</option>
+<option>Residuos o basura</option>
+<option>Agua turbia o contaminada</option>
+<option>Daño a flora o fauna</option>
+<option>Otro</option>
+                  </select>
+                  <div class="err" id="e-type"></div>
+                </div>
+                <div class="field">
+                  <label for="f-zone">Ubicación o sector <span class="req" aria-hidden="true">*</span><span class="sr"> (obligatorio)</span></label>
+                  <select id="f-zone" class="input" aria-describedby="h-zone e-zone" required>
+                    <option value="">Selecciona un sector</option>
+<option>Quintero centro</option>
+<option>La Greda</option>
+<option>Los Maitenes</option>
+<option>Ventanas</option>
+<option>Puchuncaví</option>
+<option>Otro sector</option>
+                  </select>
+                  <div class="hint" id="h-zone">Basta con el sector aproximado. No necesitamos tu dirección ni tu ubicación exacta.</div>
+                  <div class="err" id="e-zone"></div>
+                </div>
+                <div class="field">
+                  <label for="f-desc">Descripción <span class="req" aria-hidden="true">*</span><span class="sr"> (obligatorio)</span></label>
+                  <textarea id="f-desc" class="input" aria-describedby="h-desc e-desc" required placeholder="¿Qué observaste y cuándo?"></textarea>
+                  <div class="hint" id="h-desc">Mínimo 15 caracteres. No incluyas nombres, rostros ni datos de otras personas. <span id="desc-count" class="tnum">Faltan 15 caracteres.</span></div>
+                  <div class="err" id="e-desc"></div>
+                </div>
+                <div class="field">
+                  <span class="lbl" id="l-photo">Fotografía <span class="muted">(opcional)</span></span>
+                  <div class="dropwrap">
+                    <input type="file" id="f-photo" class="sr" accept="image/png,image/jpeg,image/webp" aria-labelledby="l-photo" aria-describedby="h-photo e-photo">
+                    <label for="f-photo" class="drop">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V4M7.5 8.5L12 4l4.5 4.5M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg>
+                      <strong>Selecciona una fotografía</strong>
+                      <span class="muted small">JPG, PNG o WEBP · máximo 5 MB</span>
+                    </label>
+                  </div>
+                  <div class="hint" id="h-photo">Evita fotografiar rostros o patentes. Al adjuntarla se vuelve a dibujar y se pierden los datos ocultos de la foto, como la ubicación.</div>
+                  <div class="err" id="e-photo"></div>
+                  <div class="photo-prev" id="photoprev" hidden>
+                    <img id="photoimg" alt="Vista previa de la foto adjunta">
+                    <button type="button" class="btn ghost small" id="photodel">Quitar foto</button>
+                  </div>
+                </div>
+
+                <div class="privbox" id="privacy">
+                  <h3>Tu privacidad</h3>
+                  <label class="switch" for="f-anon">
+                    <input type="checkbox" id="f-anon" checked>
+                    <span class="track" aria-hidden="true"></span>
+                    <span class="stx"><strong>Reportar de forma anónima</strong><span class="muted small">Tu reporte no lleva ningún dato de contacto.</span></span>
+                  </label>
+                  <div class="field" id="contactfield" hidden>
+                    <label for="f-contact">Contacto (opcional)</label>
+                    <input type="text" id="f-contact" class="input" autocomplete="off" placeholder="Correo o teléfono" aria-describedby="h-contact">
+                    <div class="hint" id="h-contact">Solo se usaría para pedirte más detalles de este reporte.</div>
+                  </div>
+                  <details class="acc priv"><summary><span class="privsum"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Cómo usamos y protegemos tus datos</span></summary><div class="acc-body"><ul class="plain">
+                    <li><strong>Qué se guarda:</strong> tipo de problema, sector aproximado, fecha de envío, descripción, la foto (sin datos ocultos) y el contacto solo si decides darlo.</li>
+                    <li><strong>Qué no se pide:</strong> tu nombre, tu dirección ni el GPS de tu teléfono.</li>
+                    <li><strong>Para qué se usa:</strong> mostrar el reporte en el mapa y en las estadísticas, por sector.</li>
+                    <li><strong>Dónde queda:</strong> en este prototipo, solo en tu navegador. No se envía a ningún servidor ni llega a una autoridad.</li>
+                    <li><strong>Tus derechos:</strong> puedes ver y borrar tus reportes cuando quieras, más abajo en esta pantalla.</li>
+                    <li><strong>Más detalle:</strong> <button type="button" class="linkbtn" data-go="privacidad">ver la pantalla Privacidad y datos</button>.</li>
+                    <li><strong>En una versión real</strong> se informaría por cuánto tiempo se conservan los reportes, quién los ve y cómo pedir su eliminación, según la Ley 21.719 de protección de datos personales.</li>
+                  </ul></div></details>
+                </div>
+
+                <div class="field">
+                  <div class="check">
+                    <input type="checkbox" id="f-consent" aria-describedby="e-consent">
+                    <label for="f-consent">Entiendo que mi reporte se usará para mostrar alertas ciudadanas en el mapa de EcoQuintero, y que en este prototipo se guarda solo en mi navegador y no llega a una autoridad. <span class="req" aria-hidden="true">*</span><span class="sr"> (obligatorio)</span></label>
+                  </div>
+                  <div class="err" id="e-consent"></div>
+                </div>
+                <div><button type="submit" class="btn primary block" id="sendbtn">Guardar reporte</button></div>
+                <div class="err" id="e-form" role="alert"></div>
+              </form>
+            </div>
+
+            <div style="display:grid;gap:16px;min-width:0;">
+              <div class="card flat" id="safety">
+                <h3 style="margin-bottom:8px;">Tu seguridad es lo primero</h3>
+                <ul style="margin:0;padding-left:1.1rem;display:grid;gap:6px;">
+                  <li>Documenta desde una distancia segura.</li>
+                  <li>No te expongas a humo ni a sustancias desconocidas.</li>
+                  <li>No intervengas en el ecosistema.</li>
+                  <li>Sé claro y específico.</li>
+                </ul>
+              </div>
+              <div class="notice" role="note">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+                <span>Este formulario no reemplaza un canal de emergencias. Los reportes del prototipo no se envían a instituciones.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="confirm" hidden style="display:none;"></div>
+
+          <div class="mine" id="minewrap">
+            <h2>Tus reportes en este navegador</h2>
+            <div id="mine"></div>
+          </div>
+        </section>
+
+        <!-- ESTADÍSTICAS -->
+        <section class="view" data-view="estadisticas" aria-labelledby="t-est" hidden>
+          <div class="pagehead">
+            <span class="eyebrow">Observatorio ambiental ciudadano</span>
+            <h1 id="t-est" tabindex="-1">Estadísticas</h1>
+            <p>Datos que ayudan a entender y actuar. Estación Centro Quintero, del 12 al 18 de octubre de 2026.</p>
+          </div>
+          <div class="figs" id="figs"></div>
+          <div class="card" style="display:grid;gap:12px;">
+            <div class="field" style="max-width:360px;">
+              <label for="paramsel">Parámetro</label>
+              <select id="paramsel" class="input"></select>
+            </div>
+            <div id="chart-title"></div>
+            <div class="chart" data-chart="mp25" data-sel="stats" id="statschart"></div>
+            <div class="readout" id="stats-readout" aria-live="polite"></div>
+            <div class="legend" id="stats-legend"></div>
+            <details class="acc">
+              <summary>Ver tabla de valores</summary>
+              <div class="acc-body"><div class="scroll"><table id="stats-table"></table></div></div>
+            </details>
+          </div>
+          <div style="display:grid;gap:6px;">
+            <h2 id="detail-title">Detalle por parámetro</h2>
+            <p class="muted small" id="detail-note"></p>
+          </div>
+          <div class="pgrid" id="pgrid"></div>
+          <div class="notice" role="note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+            <span>Datos preliminares (no validados) de la red SINCA, estación Centro Quintero, promedios diarios del 12 al 18 de octubre de 2026. Los reportes ciudadanos son los enviados desde este navegador.</span>
+          </div>
+        </section>
+
+        <!-- AYUDAR -->
+        <section class="view" data-view="ayudar" aria-labelledby="t-ayudar" hidden>
+          <div class="pagehead">
+            <span class="eyebrow">Cuidar es una acción colectiva</span>
+            <h1 id="t-ayudar" tabindex="-1">¿Cómo puedo ayudar?</h1>
+            <p>No necesitas ser especialista para hacer la diferencia. Estas son acciones simples y seguras.</p>
+          </div>
+          <h2>Buenas prácticas</h2>
+          <div class="grid2 tips-anim"><div class="card tip"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h7a2.5 2.5 0 1 1-2.5 2.5"/></svg></div><h3>Revisa la fecha del dato</h3><p>Estos registros corresponden al 12 al 18 de octubre de 2026; consulta siempre el último dato disponible.</p></div><div class="card tip"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20v-1a6 6 0 0 1 13 0v1"/><circle cx="17.5" cy="9" r="2.5"/><path d="M18 14.2a5 5 0 0 1 3.5 4.8V20"/></svg></div><h3>Cuida a las personas sensibles</h3><p>En días moderados, niños, adultos mayores y personas con enfermedades respiratorias pueden reducir el esfuerzo físico al aire libre.</p></div><div class="card tip"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></div><h3>Consulta canales oficiales</h3><p>Ante una emergencia o un episodio de contaminación, sigue las indicaciones de las autoridades.</p></div><div class="card tip"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 12v6M9 15h6"/></svg></div><h3>Documenta con seguridad</h3><p>Si observas un problema ambiental, registra el lugar y la hora sin exponerte a humo o sustancias desconocidas.</p></div></div>
+          <h2 class="care-h">Acciones para cuidar el territorio</h2>
+          <div class="grid2 care">
+            <details class="acc" open>
+              <summary><span class="sum-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/></svg></span><span class="sum-t">Cuidemos nuestros humedales<small>Observa sin alterar estos ecosistemas.</small></span></summary>
+              <div class="acc-body"><ul>
+                <li>Observa desde el borde y no entres al agua ni a la vegetación.</li>
+                <li>No dejes residuos ni uses vehículos dentro del humedal.</li>
+                <li>Si ves basura, agua turbia o animales afectados, repórtalo desde EcoQuintero.</li>
+              </ul></div>
+            </details>
+            <details class="acc" open>
+              <summary><span class="sum-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="M5 19c3-4 6-6.5 10-8"/></svg></span><span class="sum-t">Protege la flora y fauna nativa<small>Mirar sin intervenir también cuida.</small></span></summary>
+              <div class="acc-body"><ul>
+                <li>Observar sin intervenir también es una forma de cuidar.</li>
+                <li>No recolectes plantas ni molestes a los animales.</li>
+                <li>Camina por senderos habilitados para no dañar la vegetación.</li>
+              </ul></div>
+            </details>
+            <details class="acc" open>
+              <summary><span class="sum-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/><path d="M10 11v6M14 11v6"/></svg></span><span class="sum-t">Menos residuos, más territorio<small>Pequeños hábitos en casa y en la calle.</small></span></summary>
+              <div class="acc-body"><ul>
+                <li>Reduce, reutiliza y separa tus residuos desde casa.</li>
+                <li>No dejes basura en playas, quebradas ni caminos.</li>
+                <li>Comparte con tu familia y vecinos lo que aprendas aquí.</li>
+              </ul></div>
+            </details>
+            <details class="acc" open>
+              <summary><span class="sum-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg></span><span class="sum-t">Tu reporte hace la diferencia<small>Deja constancia, de forma segura.</small></span></summary>
+              <div class="acc-body"><ul>
+                <li>Documenta desde una distancia segura y sin exponerte.</li>
+                <li>Indica el sector y describe lo que viste, olió o notaste, con fecha.</li>
+                <li>Puedes reportar de forma anónima. No incluyas datos de otras personas.</li>
+              </ul>
+              <div><button class="btn primary" data-go="reportar">Hacer un reporte</button></div></div>
+            </details>
+          </div>
+        </section>
+
+
+
+        <!-- PRIVACIDAD -->
+        <section class="view" data-view="privacidad" aria-labelledby="t-priv" hidden>
+          <div class="pagehead">
+            <span class="eyebrow">Tus datos, tus reglas</span>
+            <h1 id="t-priv" tabindex="-1">Privacidad y datos</h1>
+            <p>Así se manejan los datos que ingresas al reportar un problema en EcoQuintero.</p>
+          </div>
+          <div class="grid2"><div class="card tip"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Qué guardamos</h3><p>Tipo de problema, sector aproximado, fecha de envío, descripción, la foto (sin datos ocultos) y el contacto solo si decides darlo.</p></div><div class="card tip"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Qué no pedimos</h3><p>Tu nombre, tu dirección ni el GPS de tu teléfono. Reportar de forma anónima es la opción por defecto.</p></div><div class="card tip"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Para qué se usan</h3><p>Para mostrar el reporte en el mapa y en las estadísticas, siempre por sector y no en un punto exacto.</p></div><div class="card tip"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Dónde quedan</h3><p>En este prototipo, solo en tu navegador. No se envían a ningún servidor ni llegan a una autoridad.</p></div><div class="card tip"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Tus derechos</h3><p>Puedes ver y borrar tus reportes cuando quieras, desde Reportar problema o con el botón de esta pantalla.</p></div><div class="card tip"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>En una versión real</h3><p>Se informaría por cuánto tiempo se conservan los reportes, quién los ve y cómo pedir su eliminación, según la Ley 21.719 de protección de datos personales de Chile.</p></div></div>
+          <div class="card" style="display:grid;gap:10px;">
+            <h2>Borrar mis reportes</h2>
+            <p class="muted">Tienes <strong id="priv-count" class="tnum">0</strong> reportes guardados en este navegador.</p>
+            <div class="navrow"><button type="button" class="btn ghost" id="delall2">Borrar todos mis reportes</button><button type="button" class="btn primary" data-go="reportar">Ir a reportar</button></div>
+            <div class="small muted" id="priv-msg" role="status"></div>
+          </div>
+        </section>
+
+
+        <!-- SOBRE -->
+        <section class="view" data-view="sobre" aria-labelledby="t-sobre" hidden>
+          <div class="pagehead">
+            <span class="eyebrow">Quiénes somos</span>
+            <h1 id="t-sobre" tabindex="-1">Sobre EcoQuintero</h1>
+            <p>Información clara para respirar con más conciencia y participación ciudadana para cuidar el territorio.</p>
+          </div>
+          <div class="grid2">
+            <div class="card tip"><h3>Para qué sirve</h3><p>Muestra de forma simple cómo está el aire en Quintero y Puchuncaví, usando datos públicos del Ministerio del Medio Ambiente, y permite reportar problemas ambientales de forma anónima.</p></div>
+            <div class="card tip"><h3>Nuestros objetivos</h3><p>Que cualquier persona pueda entender los datos ambientales sin ser especialista, y que sus observaciones del territorio cuenten.</p></div>
+            <div class="card tip"><h3>Por qué existe</h3><p>Quintero y Puchuncaví conviven con actividad industrial desde hace décadas, y los datos públicos no siempre son fáciles de leer. EcoQuintero los traduce a un lenguaje cotidiano.</p></div>
+            <div class="card tip"><h3>Qué es esta versión</h3><p>Es un prototipo académico. Usa datos preliminares de una sola estación (Centro Quintero) y guarda los reportes solo en tu navegador.</p></div>
+          </div>
+          <div class="card" style="display:grid;gap:10px;">
+            <h2>Team Chungungos</h2>
+            <p class="muted small">Estudiantes de la Facultad de Ingeniería, Universidad de Valparaíso. Curso Ingeniería, Innovación y Emprendimiento (ING121).</p>
+            <ul class="plain" style="margin:0;padding-left:1.1rem;display:grid;gap:4px;"><li>Andrea Gopaldas</li><li>Fernanda Farias</li><li>Catalina Espinoza</li><li>Francisca Orrego</li><li>Dominic Riquelme</li><li>Osvaldo Ahumada</li></ul>
+          </div>
+          <div class="card" style="display:grid;gap:10px;">
+            <h2>Déjanos una sugerencia</h2>
+            <div class="field"><label for="f-sug">Tu sugerencia (opcional)</label><textarea id="f-sug" class="input" placeholder="¿Qué cambiarías o agregarías?"></textarea><div class="hint">No incluyas datos personales. En este prototipo la sugerencia queda solo en tu navegador.</div></div>
+            <div class="navrow"><button type="button" class="btn primary" id="sugsave">Guardar sugerencia</button></div>
+            <div class="small muted" id="sug-msg" role="status"></div>
+          </div>
+          <p class="muted small">© 2026 Team Chungungos. Prototipo académico. Datos: SINCA, Ministerio del Medio Ambiente de Chile.</p>
+        </section>
+
+        <div class="foot">
+          <span>EcoQuintero · información para cuidar, participación para cambiar.</span>
+          <span><button type="button" class="linkbtn" data-go="privacidad">Privacidad y datos</button> · <button type="button" class="linkbtn" data-go="sobre">Sobre EcoQuintero</button></span>
+          <span>Prototipo académico V2 · datos preliminares de SINCA (estación Centro Quintero) · reportes guardados solo en tu navegador.</span>
+          
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<nav class="bottomnav" id="bottomnav" aria-label="Navegación principal"></nav>
+<div class="sheet-back" id="sheetback" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-label="Más secciones">
+    <button class="sl" data-go="estadisticas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Estadísticas</button>
+    <button class="sl" data-go="privacidad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Privacidad y datos</button>
+    <button class="sl" data-go="sobre"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>Sobre EcoQuintero</button>
+    <button class="sl" data-go="ayudar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>¿Cómo puedo ayudar?</button>
+    <button class="btn ghost" id="sheetclose">Cerrar</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+
+  /* ---------- datos: SINCA, estación Centro Quintero, promedios diarios no validados ---------- */
+  var DAYS = ['2026-10-12', '2026-10-13', '2026-10-14', '2026-10-15', '2026-10-16', '2026-10-17', '2026-10-18'];
+  var MONTHS = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+  var DOW = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+  var WDAYS = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+  var P = {
+    mp25: { name: 'Polvo fino', short: 'MP2,5', unit: 'µg/m³', dec: 0, vals: [10, 8, 9, 13, 24, 14, 17],
+      refs: [{ v: 15, label: 'Guía OMS 15' }, { v: 50, label: 'Norma chilena 50' }],
+      desc: 'Partículas muy pequeñas que pueden llegar a los pulmones. Vienen de la combustión, el tránsito y la actividad industrial.' },
+    mp10: { name: 'Polvo respirable', short: 'MP10', unit: 'µg/m³N', dec: 0, vals: [28, 28, 31, 41, 83, 43, 45],
+      refs: [{ v: 45, label: 'Guía OMS 45' }, { v: 150, label: 'Norma chilena 150' }],
+      desc: 'Partículas más gruesas que el polvo fino, como polvo, cenizas y tierra suspendida en el aire.' },
+    so2: { name: 'Dióxido de azufre', short: 'SO₂', unit: 'ppb', dec: 2, vals: [4.26, 4.18, 3.95, 4.19, 2.65, 1.23, 1.45],
+      desc: 'Gas que se libera al quemar combustibles con azufre. En concentraciones altas irrita los ojos y las vías respiratorias.' },
+    no2: { name: 'Dióxido de nitrógeno', short: 'NO₂', unit: 'ppb', dec: 2, vals: [8.76, 7.92, 8.89, 8.46, 6.74, 5.24, 7.63],
+      desc: 'Gas que sale de motores y de procesos de combustión.' },
+    o3: { name: 'Ozono', short: 'O₃', unit: 'ppb', dec: 0, vals: [20, 22, 19, 17, 15, 16, 14],
+      desc: 'Gas que se forma con la luz del sol. En cantidades altas irrita las vías respiratorias.' },
+    co: { name: 'Monóxido de carbono', short: 'CO', unit: 'ppm', dec: 2, vals: [0.31, 0.28, 0.32, 0.32, 0.29, 0.26, 0.30],
+      desc: 'Gas sin color ni olor que sale de la combustión incompleta de motores y calefactores.' },
+    no: { name: 'Monóxido de nitrógeno', short: 'NO', unit: 'ppb', dec: 2, vals: [4.26, 4.72, 6.57, 6.26, 2.92, 1.66, 2.41],
+      desc: 'Gas de motores y combustión que se transforma en dióxido de nitrógeno.' },
+    nox: { name: 'Óxidos de nitrógeno', short: 'NOX', unit: 'ppb', dec: 2, vals: [13.02, 12.63, 15.47, 14.72, 9.65, 6.90, 10.04],
+      desc: 'Suma del monóxido y el dióxido de nitrógeno.' },
+    ch4: { name: 'Metano', short: 'CH₄', unit: 'ppm', dec: 3, vals: [2.085, 2.071, 2.096, 2.102, 2.087, 2.098, 2.132],
+      desc: 'Gas presente en el aire y en fuentes como el gas natural.' },
+    hcnm: { name: 'Hidrocarburos no metánicos', short: 'HCNM', unit: 'ppm', dec: 3, vals: [0.055, 0.041, 0.074, 0.161, 0.063, 0.036, 0.058],
+      desc: 'Compuestos orgánicos distintos del metano, que vienen de combustibles y solventes.' },
+    hct: { name: 'Hidrocarburos totales', short: 'HCT', unit: 'ppm', dec: 3, vals: [2.140, 2.112, 2.170, 2.263, 2.150, 2.134, 2.190],
+      desc: 'Suma del metano y los hidrocarburos no metánicos.' }
+  };
+  var ORDER = ['mp25', 'mp10', 'so2', 'no2', 'o3', 'co', 'no', 'nox', 'ch4', 'hcnm', 'hct'];
+  var LV = [{ k: 'good', name: 'Bueno' }, { k: 'mod', name: 'Moderado' }, { k: 'high', name: 'Alto' }];
+  var ADVICE = [
+    'Puedes hacer actividades al aire libre con normalidad.',
+    'Las personas sensibles (niños, adultos mayores y quienes tienen enfermedades respiratorias) pueden reducir el esfuerzo físico al aire libre.',
+    'Evita el esfuerzo físico al aire libre, sobre todo niños, adultos mayores y personas con enfermedades respiratorias, y sigue las indicaciones de las autoridades.'
+  ];
+
+  function nf(v, dec) { return new Intl.NumberFormat('es-CL', { minimumFractionDigits: dec, maximumFractionDigits: dec }).format(v); }
+  function fv(key, v) { return nf(v, P[key].dec); }
+  function pd(s) { var a = s.split('-').map(Number); return new Date(a[0], a[1] - 1, a[2]); }
+  function longDate(s) { var d = pd(s); return d.getDate() + ' de ' + MONTHS[d.getMonth()] + ' de ' + d.getFullYear(); }
+  function shortDate(s) { var d = pd(s); return d.getDate() + ' ' + MONTHS[d.getMonth()].slice(0, 3); }
+  function lvl25(v) { return v <= 15 ? 0 : (v <= 50 ? 1 : 2); }
+  function lvl10(v) { return v <= 45 ? 0 : (v <= 150 ? 1 : 2); }
+  function dayLevel(i) { return Math.max(lvl25(P.mp25.vals[i]), lvl10(P.mp10.vals[i])); }
+  function paramLevel(key, i) { return key === 'mp25' ? lvl25(P.mp25.vals[i]) : (key === 'mp10' ? lvl10(P.mp10.vals[i]) : null); }
+  function lvlClass(i) { return i == null ? 'lv-none' : 'lv-' + LV[i].k; }
+  function reasons(i) {
+    var out = [];
+    var a = P.mp25.vals[i], b = P.mp10.vals[i];
+    if (a > 15) out.push('el polvo fino (MP2,5) llegó a ' + fv('mp25', a) + ' µg/m³, ' + (a > 50 ? 'sobre la norma chilena (50)' : 'sobre la guía de la OMS (15)'));
+    if (b > 45) out.push('el polvo respirable (MP10) llegó a ' + fv('mp10', b) + ' µg/m³, ' + (b > 150 ? 'sobre la norma chilena (150)' : 'sobre la guía de la OMS (45)'));
+    if (!out.length) return 'El polvo fino (' + fv('mp25', a) + ') y el polvo respirable (' + fv('mp10', b) + ') están dentro de la guía de la OMS.';
+    var s = out.join('; además, ');
+    return s.charAt(0).toUpperCase() + s.slice(1) + '.';
+  }
+  function phrase(key, i) {
+    var v = P[key].vals[i];
+    if (key === 'mp25') { var l = lvl25(v); return l === 0 ? 'Dentro de la guía de la OMS (15).' : (l === 1 ? 'Sobre la guía de la OMS (15), bajo la norma chilena (50).' : 'Sobre la norma chilena (50).'); }
+    if (key === 'mp10') { var m = lvl10(v); return m === 0 ? 'Dentro de la guía de la OMS (45).' : (m === 1 ? 'Sobre la guía de la OMS (45), bajo la norma chilena (150).' : 'Sobre la norma chilena (150).'); }
+    if (key === 'so2') { return 'Muy por debajo de los límites. Equivale a unos ' + nf(v * 2.62, 0) + ' µg/m³; el límite diario es 150 en Chile y 40 en la guía OMS.'; }
+    return P[key].desc;
+  }
+  var ICON = {
+    home: '<path d="M3 11l9-8 9 8M5 10v10h14V10"/>', map: '<path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/>',
+    bell: '<path d="M6 16v-5a6 6 0 1 1 12 0v5l2 2H4l2-2zM10 21h4"/>', flag: '<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',
+    chart: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>', heart: '<path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/>',
+    info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>',
+    shield: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>',
+    more: '<path d="M5 12h.01M12 12h.01M19 12h.01" stroke-width="3.2"/>'
+  };
+  function svgIcon(n) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICON[n] + '</svg>'; }
+  function lvIcon(i) {
+    var inner = i === 0 ? '<circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/>' : (i === 1 ? '<path d="M12 3l9 9-9 9-9-9z"/><path d="M12 8v5M12 16h.01"/>' : '<path d="M12 4l9.5 16h-19z"/><path d="M12 10v4.5M12 17.2h.01"/>');
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + inner + '</svg>';
+  }
+
+  /* ---------- estado ---------- */
+  var S = { view: 'inicio', day: 6, filter: 'all', layers: { air: true, wet: true, rep: true }, station: 'centro', param: 'mp25', photo: null, reports: [], sel: { home: 6, stats: 6 } };
+  S.zoom = 0;
+  var KEY = 'ecoq.reportes.v2';
+  try { var raw = localStorage.getItem(KEY); if (raw) { var arr = JSON.parse(raw); if (Array.isArray(arr)) S.reports = arr; } } catch (e) { /* sin almacenamiento */ }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(S.reports)); } catch (e) { /* el reporte sigue en memoria */ } }
+
+  var NAV = [
+    { id: 'inicio', label: 'Inicio', icon: 'home' }, { id: 'mapa', label: 'Mapa ambiental', short: 'Mapa', icon: 'map' },
+    { id: 'alertas', label: 'Alertas', icon: 'bell' }, { id: 'reportar', label: 'Reportar problema', short: 'Reportar', icon: 'flag' },
+    { id: 'estadisticas', label: 'Estadísticas', icon: 'chart' }, { id: 'ayudar', label: '¿Cómo puedo ayudar?', icon: 'heart' },
+    { id: 'privacidad', label: 'Privacidad y datos', icon: 'shield' }, { id: 'sobre', label: 'Sobre EcoQuintero', icon: 'info' }
+  ];
+  function alertDays() { var r = []; for (var i = DAYS.length - 1; i >= 0; i--) { if (dayLevel(i) > 0) r.push(i); } return r; }
+
+  function buildNav() {
+    var n = alertDays().length;
+    $('#sidenav').innerHTML = NAV.map(function (x) {
+      return '<button class="sn" data-go="' + x.id + '">' + svgIcon(x.icon) + '<span>' + x.label + '</span>' + (x.id === 'alertas' && n ? '<span class="count" aria-label="' + n + ' alertas">' + n + '</span>' : '') + '</button>';
+    }).join('');
+    var bn = ['inicio', 'mapa', 'alertas', 'reportar'].map(function (id) {
+      var x = NAV.filter(function (y) { return y.id === id; })[0];
+      return '<button class="bn" data-go="' + id + '">' + svgIcon(x.icon) + '<span>' + (x.short || x.label) + (id === 'alertas' && n ? ' (' + n + ')' : '') + '</span></button>';
+    }).join('') + '<button class="bn" id="morebtn" aria-haspopup="dialog">' + svgIcon('more') + '<span>Más</span></button>';
+    $('#bottomnav').innerHTML = bn;
+  }
+
+  function show(v) {
+    S.view = v;
+    $$('[data-view]').forEach(function (el) { el.hidden = el.getAttribute('data-view') !== v; });
+    $$('[data-go]').forEach(function (b) { if (b.classList.contains('sn') || b.classList.contains('bn')) { if (b.getAttribute('data-go') === v || (v === 'estadisticas' || v === 'ayudar') && false) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current'); } });
+    var more = $('#morebtn'); if (more) { if (v === 'estadisticas' || v === 'ayudar' || v === 'privacidad' || v === 'sobre') more.setAttribute('aria-current', 'page'); else more.removeAttribute('aria-current'); }
+    $('#sheetback').hidden = true;
+    window.scrollTo(0, 0);
+    var h = $('[data-view="' + v + '"] h1'); if (h) { try { h.focus({ preventScroll: true }); } catch (e) { h.focus(); } }
+    try { history.replaceState(null, '', '#' + v); } catch (e) { /* ignorar */ }
+    if (v === 'mapa') renderMap();
+    if (v === 'alertas') renderAlerts();
+    if (v === 'reportar') renderMine();
+    if (v === 'estadisticas') renderStats();
+    if (v === 'privacidad') $('#priv-count').textContent = String(S.reports.length);
+    requestAnimationFrame(drawCharts);
+  }
+
+  /* ---------- inicio ---------- */
+  function renderHome() {
+    var i = S.day, lv = dayLevel(i), isLast = i === DAYS.length - 1;
+    var CONTOUR = '<svg class="contour" viewBox="0 0 400 200" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">' + [40, 65, 90, 115, 140, 165].map(function (y) { return '<path d="M-20 ' + y + ' C 60 ' + (y - 35) + ' 130 ' + (y + 25) + ' 210 ' + (y - 5) + ' S 340 ' + (y - 70) + ' 430 ' + (y - 30) + '"/>'; }).join('') + '</svg>';
+    $('#home-sub').textContent = 'Último dato disponible: ' + longDate(DAYS[DAYS.length - 1]) + '.';
+    $('#banner-date').textContent = longDate(DAYS[DAYS.length - 1]);
+    $('#info-line').textContent = 'Estación Centro Quintero · dato preliminar de SINCA · medido el ' + longDate(DAYS[i]);
+    var ds = $('#daysel'); if (!ds.options.length) { ds.innerHTML = DAYS.map(function (d, k) { return '<option value="' + k + '">' + longDate(d) + '</option>'; }).join(''); }
+    ds.value = String(i);
+    $('#hero').className = 'card hero ' + lvlClass(lv);
+    $('#hero').innerHTML =
+      CONTOUR + '<div class="hero-top"><div class="hero-date"><span class="eyebrow">' + (isLast ? 'Último dato disponible' : 'Día seleccionado') + '</span><strong>' + WDAYS[pd(DAYS[i]).getDay()] + ', ' + longDate(DAYS[i]) + '</strong></div><div style="display:flex;flex-wrap:wrap;gap:6px;"><span class="pill lv-none">Dato preliminar</span><span class="tag">Promedio de 24 horas</span></div></div>' +
+      '<div class="hero-level"><div class="hero-ico">' + lvIcon(lv) + '</div><div><div class="hero-sub">Nivel de riesgo</div><div class="hero-word">' + LV[lv].name + '</div></div></div>' +
+      '<p>' + esc(reasons(i)) + '</p>' +
+      '<div class="advice"><strong>Qué hacer</strong><span>' + ADVICE[lv] + '</span></div>' +
+      (isLast ? '<p class="muted small">En esta demo no hay datos de hoy: el último dato cargado es de esa fecha.</p>' : '');
+    $('#week').innerHTML = DAYS.map(function (d, k) {
+      var l = dayLevel(k), dt = pd(d);
+      return '<button class="day ' + lvlClass(l) + '" data-day="' + k + '" aria-pressed="' + (k === i) + '" aria-label="' + longDate(d) + ': ' + LV[l].name + ', polvo fino ' + P.mp25.vals[k] + '"><span class="dw">' + DOW[dt.getDay()] + '</span><span class="dn tnum">' + dt.getDate() + '</span>' + (k === DAYS.length - 1 ? '<span class="lastdot" aria-hidden="true"></span>' : '') + '<span class="di">' + lvIcon(l) + '</span><span class="bw" aria-hidden="true"><span class="bar" style="height:' + Math.round(4 + P.mp25.vals[k] / 30 * 22) + 'px"></span></span></button>';
+    }).join('');
+    var pk = 0; P.mp25.vals.forEach(function (x, k) { if (x > P.mp25.vals[pk]) pk = k; });
+    var pb = $('#peakbtn'); pb.setAttribute('data-peak', pk);
+    pb.innerHTML = '<span>Día con más polvo fino (MP2,5) de la semana: <strong>' + DOW[pd(DAYS[pk]).getDay()] + ' ' + shortDate(DAYS[pk]) + ', ' + fv('mp25', P.mp25.vals[pk]) + ' µg/m³</strong></span><span class="go">Ver</span>';
+    $('#metrics').innerHTML = ['mp25', 'mp10', 'so2'].map(function (k) {
+      var p = P[k], v = p.vals[i], l = paramLevel(k, i);
+      var pill = l == null ? '' : '<span class="pill ' + lvlClass(l) + '">' + lvIcon(l) + LV[l].name + '</span>';
+      return '<div class="card metric ' + lvlClass(l) + '"><div class="m-name">' + p.name + ' (' + p.short + ')</div><div class="m-val tnum">' + fv(k, v) + '<small>' + p.unit + '</small></div>' + pill + spark(k, i) + '<p class="muted small">' + esc(phrase(k, i)) + '</p></div>';
+    }).join('');
+    $('#alltable').innerHTML = '<thead><tr><th>Parámetro</th><th>Valor</th><th>Qué es</th></tr></thead><tbody>' + ORDER.map(function (k) {
+      var p = P[k]; return '<tr><td><strong>' + p.name + '</strong><br><span class="muted small">' + p.short + '</span></td><td class="num">' + fv(k, p.vals[i]) + ' ' + p.unit + '</td><td class="small">' + p.desc + '</td></tr>';
+    }).join('') + '</tbody>';
+    S.sel.home = i; drawCharts();
+    updateReadout('home');
+  }
+  function spark(key, sel) {
+    var v = P[key].vals, mn = Math.min.apply(null, v), mx = Math.max.apply(null, v), r = (mx - mn) || 1;
+    var pts = v.map(function (x, k) { return [(k / (v.length - 1)) * 100, 26 - ((x - mn) / r) * 22]; });
+    var d = pts.map(function (p, k) { return (k ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1); }).join(' ');
+    return '<svg class="spark" viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"><path d="' + d + '" fill="none" stroke="var(--brand)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/><circle cx="' + pts[sel][0].toFixed(1) + '" cy="' + pts[sel][1].toFixed(1) + '" r="3.2" fill="var(--copper)" vector-effect="non-scaling-stroke"/></svg>';
+  }
+
+  /* ---------- gráficos a escala real de pantalla ---------- */
+  function niceStep(x) { var p = Math.pow(10, Math.floor(Math.log10(x))), f = x / p; return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10) * p; }
+  function chartSVG(key, w, sel) {
+    var KK = Number(getComputedStyle(document.documentElement).getPropertyValue('--fsk')) || 1;
+    var p = P[key], v = p.vals, refs = p.refs || [], H = 250, L = Math.round(46 * KK), R = 16, T = 22, B = 34;
+    var lo, hi, adj = false;
+    if (refs.length) { var mx = Math.max.apply(null, v.concat(refs.map(function (r) { return r.v; }))); var st = niceStep(mx / 4); lo = 0; hi = Math.ceil(mx * 1.05 / st) * st; }
+    else { var a = Math.min.apply(null, v), b = Math.max.apply(null, v), rg = (b - a) || 1; lo = Math.max(0, a - rg * 0.3); hi = b + rg * 0.3; adj = true; }
+    var pl = L + 14, pr = w - R - 14, ph = H - T - B;
+    var X = function (k) { return pl + (pr - pl) * (k / (v.length - 1)); };
+    var Y = function (val) { return T + ph - ((val - lo) / (hi - lo)) * ph; };
+    var out = '<svg viewBox="0 0 ' + w + ' ' + H + '" role="img" aria-label="Gráfico de ' + p.name + ' del 12 al 18 de octubre de 2026">';
+    for (var t = 0; t <= 4; t++) { var tv = lo + (hi - lo) * t / 4, ty = Y(tv); out += '<line class="grid" x1="' + L + '" x2="' + (w - R) + '" y1="' + ty + '" y2="' + ty + '"/><text x="' + (L - 8) + '" y="' + (ty + 4) + '" text-anchor="end" class="tnum">' + nf(tv, adj ? Math.max(p.dec, 1) : (hi < 10 ? 1 : 0)) + '</text>'; }
+    refs.forEach(function (r) { var ry = Y(r.v); out += '<line class="ref" x1="' + L + '" x2="' + (w - R) + '" y1="' + ry + '" y2="' + ry + '"/><text class="reflab" x="' + (L + 4) + '" y="' + (ry - 5) + '" text-anchor="start">' + r.label + '</text>'; });
+    var d = v.map(function (val, k) { return (k ? 'L' : 'M') + X(k).toFixed(1) + ' ' + Y(val).toFixed(1); }).join(' ');
+    out += '<path class="line" d="' + d + '"/>';
+    v.forEach(function (val, k) {
+      var l = paramLevel(key, k), col = l == null ? 'var(--brand)' : 'var(--' + LV[l].k + ')', isSel = k === sel;
+      out += '<text class="val" x="' + X(k) + '" y="' + (Y(val) - (isSel ? 14 : 10)) + '" text-anchor="middle" style="font-size:' + ((isSel ? 12.5 : 11) * KK) + 'px">' + fv(key, val) + '</text>';
+      out += '<g class="pt" data-k="' + k + '" tabindex="0" role="button" aria-label="' + shortDate(DAYS[k]) + ': ' + fv(key, val) + ' ' + p.unit + '">' +
+        '<circle cx="' + X(k) + '" cy="' + Y(val) + '" r="16" fill="transparent"/>' +
+        '<circle cx="' + X(k) + '" cy="' + Y(val) + '" r="' + (isSel ? 7 : 4.5) + '" fill="' + col + '" stroke="var(--surface)" stroke-width="2"/>' + (isSel ? '<circle cx="' + X(k) + '" cy="' + Y(val) + '" r="10.5" fill="none" stroke="var(--brand)" stroke-width="2"/>' : '') + '</g>';
+      out += '<text x="' + X(k) + '" y="' + (H - 12) + '" text-anchor="middle" class="tnum">' + shortDate(DAYS[k]) + '</text>';
+    });
+    return out + '</svg>' + (adj ? '<p class="muted small" style="margin-top:4px;">La escala del gráfico no parte de cero, para que se vea la variación.</p>' : '');
+  }
+  function drawCharts() {
+    $$('.chart').forEach(function (el) {
+      var w = el.clientWidth; if (!w) return;
+      var key = el.getAttribute('data-chart'), which = el.getAttribute('data-sel');
+      el.innerHTML = chartSVG(key, Math.max(300, w), S.sel[which]);
+    });
+  }
+  function updateReadout(which) {
+    var el = $(which === 'home' ? '#home-readout' : '#stats-readout'); if (!el) return;
+    var key = which === 'home' ? 'mp25' : S.param, k = S.sel[which], p = P[key], l = paramLevel(key, k);
+    el.innerHTML = '<strong>' + longDate(DAYS[k]) + ':</strong> ' + fv(key, p.vals[k]) + ' ' + p.unit + (l == null ? '' : ' · <span class="pill ' + lvlClass(l) + '">' + lvIcon(l) + LV[l].name + '</span>');
+  }
+
+  /* ---------- mapa esquemático ---------- */
+  var ZONES = { 'Quintero centro': [265, 296], 'La Greda': [375, 172], 'Los Maitenes': [440, 335], 'Ventanas': [245, 138], 'Puchuncaví': [430, 92], 'Otro sector': [545, 240] };
+  var STNS = [
+    { id: 'centro', name: 'Centro Quintero', x: 265, y: 296, live: true },
+    { id: 'ventanas', name: 'Ventanas', x: 245, y: 138 }, { id: 'puchu', name: 'Puchuncaví', x: 430, y: 92 },
+    { id: 'greda', name: 'La Greda', x: 375, y: 172 }, { id: 'maitenes', name: 'Los Maitenes', x: 440, y: 335 }
+  ];
+  function renderLayers() {
+    var defs = [['air', 'Calidad del aire'], ['wet', 'Humedales (ilustrativo)'], ['rep', 'Reportes ciudadanos (' + S.reports.length + ')']];
+    $('#layers').innerHTML = defs.map(function (d) { return '<button class="chip" data-layer="' + d[0] + '" aria-pressed="' + S.layers[d[0]] + '">' + d[1] + '</button>'; }).join('');
+  }
+  function renderMap() {
+    renderLayers();
+    var lv = dayLevel(DAYS.length - 1);
+    var s = '<svg viewBox="0 0 640 450" role="img" aria-label="Mapa esquemático de la bahía de Quintero y Puchuncaví con la estación Centro Quintero">';
+    s += '<rect width="640" height="450" fill="var(--sea)"/>';
+    s += '<path d="M205 0 C195 50 215 100 210 150 C240 160 290 175 325 215 C335 240 315 265 285 280 C250 295 215 285 178 302 C195 330 215 380 232 450 L640 450 L640 0 Z" fill="var(--land)" stroke="var(--line)" stroke-width="2"/>';
+    s += '<path d="M245 138 C300 150 340 160 375 172 M265 296 C320 280 350 230 375 172 M375 172 C400 140 420 115 430 92 M375 172 C400 240 420 290 440 335 M440 335 C490 300 520 270 545 240" stroke="var(--road)" stroke-width="3" fill="none" opacity=".9"/>';
+    if (S.layers.wet) {
+      s += '<g><ellipse cx="520" cy="320" rx="34" ry="15" fill="var(--wet)" opacity=".8"/><ellipse cx="330" cy="400" rx="42" ry="13" fill="var(--wet)" opacity=".8"/><ellipse cx="300" cy="105" rx="26" ry="10" fill="var(--wet)" opacity=".8"/></g>';
+    }
+    s += '<text class="zone sea" x="105" y="70" text-anchor="middle" transform="rotate(-8 105 70)" style="font-size:17px">OCÉANO PACÍFICO</text>';
+    s += '<text class="zone sea" x="255" y="228" text-anchor="middle" style="font-size:15px;letter-spacing:.02em">Bahía de Quintero</text>';
+    s += '<g><path d="M600 30 l8 -18 l8 18 l-8 -6z" fill="var(--muted)"/><text x="608" y="52" text-anchor="middle" class="zone" style="font-size:16px;stroke:none">N</text></g>';
+    s += '<text class="zone" x="240" y="332">Quintero</text><text class="zone" x="258" y="122">Ventanas</text><text class="zone" x="446" y="88">Puchuncaví</text><text class="zone" x="388" y="190">La Greda</text><text class="zone" x="456" y="352">Los Maitenes</text>';
+    if (S.layers.rep) {
+      S.reports.forEach(function (r, k) {
+        var z = ZONES[r.zone] || ZONES['Otro sector'], dx = ((k * 37) % 36) - 18, dy = ((k * 53) % 36) - 18;
+        var cx = z[0] + dx, cy = z[1] + dy, rs = S.selRep === r.id;
+        s += '<g class="rpt" data-rep="' + r.id + '" tabindex="0" role="button" aria-label="Reporte: ' + esc(r.type) + ', ' + esc(r.zone) + '" style="cursor:pointer"><circle cx="' + cx + '" cy="' + cy + '" r="26" fill="transparent"/><path d="M' + cx + ' ' + (cy - 16) + ' l10 16 l-10 16 l-10 -16z" fill="var(--copper)" stroke="' + (rs ? 'var(--brand)' : 'var(--surface)') + '" stroke-width="' + (rs ? 4 : 2.5) + '"/></g>';
+      });
+    }
+    if (S.layers.air) {
+      STNS.forEach(function (st) {
+        var sel = S.station === st.id, col = st.live ? 'var(--' + LV[lv].k + ')' : 'var(--grey)';
+        s += '<g class="stn" data-st="' + st.id + '" tabindex="0" role="button" aria-label="Estación ' + st.name + (st.live ? ', nivel ' + LV[lv].name : ', sin datos cargados') + '">' +
+          '<circle class="halo" cx="' + st.x + '" cy="' + st.y + '" r="' + (sel ? 22 : 18) + '" fill="' + (st.live ? col : 'transparent') + '" fill-opacity=".25" stroke="' + (sel ? 'var(--brand)' : 'transparent') + '" stroke-width="3"/>' +
+          '<circle cx="' + st.x + '" cy="' + st.y + '" r="11" fill="' + (st.live ? col : 'var(--surface)') + '" stroke="' + (st.live ? 'var(--surface)' : 'var(--grey)') + '" stroke-width="' + (st.live ? 3 : 2.5) + '"' + (st.live ? '' : ' stroke-dasharray="3 3"') + '/></g>';
+      });
+    }
+    s += '</svg>';
+    $('#map').innerHTML = s;
+    applyMapMode();
+    renderStation();
+  }
+  function renderStation() {
+    var st = STNS.filter(function (x) { return x.id === S.station; })[0] || STNS[0], el = $('#stationpanel');
+    var rp = S.selRep ? S.reports.filter(function (x) { return x.id === S.selRep; })[0] : null;
+    if (rp) {
+      el.className = 'card';
+      el.innerHTML = '<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;"><div><span class="eyebrow">Reporte ciudadano</span><h2>' + esc(rp.type) + '</h2></div><span class="tag">' + (rp.anon ? 'Anónimo' : 'Con contacto') + '</span></div>' +
+        '<ul class="plist"><li><span>Sector</span><strong>' + esc(rp.zone) + '</strong></li><li><span>Fecha</span><strong>' + esc(rp.whenLabel) + '</strong></li></ul>' +
+        '<p style="margin:10px 0;">' + esc(rp.desc) + '</p>' + (rp.thumb ? '<img src="' + rp.thumb + '" alt="Foto del reporte" style="width:120px;height:120px;object-fit:cover;border-radius:10px;">' : '') +
+        '<p class="muted small" style="margin-top:8px;">La ubicación es aproximada: se muestra por sector, no en un punto exacto. Este reporte solo existe en tu navegador.</p>' +
+        '<div class="navrow" style="margin-top:10px;"><button type="button" class="btn ghost small" data-closerep="1">Volver a la estación</button><button type="button" class="btn danger small" data-del="' + rp.id + '">Borrar este reporte</button></div>';
+      return;
+    }
+    if (!st.live) {
+      el.className = 'card'; el.innerHTML = '<h2>' + st.name + '</h2><p class="muted" style="margin-top:6px;">Esta estación existe en la red SINCA, pero no hay datos cargados para ella en esta demo. Aquí no mostramos valores inventados.</p>';
+      return;
+    }
+    var i = DAYS.length - 1, lv = dayLevel(i);
+    el.className = 'card ' + lvlClass(lv);
+    el.innerHTML = '<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;"><div><h2>Estación Centro Quintero</h2><p class="muted small">Último dato: ' + longDate(DAYS[i]) + ' · preliminar, no validado</p></div><span class="pill ' + lvlClass(lv) + '">' + lvIcon(lv) + 'Nivel ' + LV[lv].name + '</span></div>' +
+      '<p style="margin:10px 0;">' + esc(reasons(i)) + '</p>' +
+      '<ul class="plist">' + ['mp25', 'mp10', 'so2', 'no2', 'o3', 'co'].map(function (k) { return '<li><span>' + P[k].name + ' (' + P[k].short + ')</span><strong class="tnum">' + fv(k, P[k].vals[i]) + ' ' + P[k].unit + '</strong></li>'; }).join('') + '</ul>' +
+      '<p class="muted small" style="margin-top:8px;">Los demás parámetros están en Inicio, en "Ver todos los parámetros medidos".</p>';
+  }
+
+  /* ---------- alertas ---------- */
+  function renderAlerts() {
+    var all = alertDays(), cnt = { all: all.length, mod: 0, high: 0 };
+    all.forEach(function (i) { if (dayLevel(i) === 1) cnt.mod++; else cnt.high++; });
+    $('#alertfilters').innerHTML = [['all', 'Todas'], ['high', 'Alto'], ['mod', 'Moderado']].map(function (f) {
+      return '<button class="chip" data-filter="' + f[0] + '" aria-pressed="' + (S.filter === f[0]) + '">' + f[1] + ' (' + cnt[f[0]] + ')</button>';
+    }).join('');
+    var list = all.filter(function (i) { return S.filter === 'all' || (S.filter === 'mod' && dayLevel(i) === 1) || (S.filter === 'high' && dayLevel(i) === 2); });
+    $('#alertlist').innerHTML = list.length ? list.map(function (i) {
+      var l = dayLevel(i);
+      return '<article class="card alert ' + lvlClass(l) + '"><div class="alert-top"><span class="date">' + longDate(DAYS[i]) + '</span><span class="pill ' + lvlClass(l) + '">' + lvIcon(l) + LV[l].name + '</span></div>' +
+        '<p>' + esc(reasons(i)) + '</p><p class="muted small">Quintero centro · promedio de 24 horas · dato preliminar.</p><div class="advice"><strong>Qué hacer</strong><span>' + ADVICE[l] + '</span></div></article>';
+    }).join('') : '<div class="card flat"><p><strong>No hay alertas de este nivel en los datos cargados.</strong></p><p class="muted small" style="margin-top:4px;">Cuando un promedio diario supere el umbral, aparecerá aquí.</p></div>';
+  }
+
+
+  var INFO = {
+    mp25: { what: 'Partículas muy pequeñas que pueden entrar profundamente en los pulmones.', src: 'Quema de leña y combustibles, vehículos y actividad industrial.', eff: 'Al respirarlo puede llegar a los pulmones y afectar sobre todo a niños, adultos mayores y personas con asma o enfermedades del corazón.' },
+    mp10: { what: 'Polvo suspendido que respiramos y que puede irritar las vías respiratorias.', src: 'Polvo de caminos y obras, tierra suspendida, cenizas y algunos procesos industriales.', eff: 'Puede irritar la nariz, la garganta y los pulmones.' },
+    so2: { what: 'Gas incoloro de olor penetrante.', src: 'Quema de combustibles con azufre, como carbón y petróleo, en procesos industriales.', eff: 'A niveles altos irrita ojos, nariz y garganta, y puede dificultar la respiración de quienes tienen asma.' },
+    no2: { what: 'Gas que se forma cuando algo se quema a altas temperaturas.', src: 'Motores de vehículos y procesos de combustión.', eff: 'A niveles altos irrita las vías respiratorias y puede agravar el asma.' },
+    o3: { what: 'Gas que se forma en el aire con la luz del sol; no sale directamente de ninguna fuente.', src: 'Se forma cuando la luz del sol reacciona con otros gases contaminantes; suele subir en días soleados.', eff: 'A nivel del suelo puede irritar los pulmones y causar tos al hacer ejercicio.' },
+    co: { what: 'Gas sin color ni olor.', src: 'Combustión incompleta: vehículos y calefactores o cocinas mal ventiladas.', eff: 'Al aire libre se diluye. En espacios cerrados es peligroso porque reduce el oxígeno en la sangre.' },
+    no: { what: 'Gas incoloro que se forma en las combustiones.', src: 'Motores de vehículos y procesos de combustión.', eff: 'Por sí solo irrita menos, pero se transforma en dióxido de nitrógeno (NO₂).' },
+    nox: { what: 'Grupo formado por el monóxido y el dióxido de nitrógeno.', src: 'Tránsito y procesos de combustión.', eff: 'Sirve como indicador del aporte de los motores y las combustiones.' },
+    ch4: { what: 'El hidrocarburo más simple y abundante del aire; es el principal componente del gas natural.', src: 'Fuentes naturales, gas natural y fugas de combustibles.', eff: 'En estas cantidades no es tóxico, pero es un gas de efecto invernadero.' },
+    hcnm: { what: 'Compuestos orgánicos distintos del metano.', src: 'Combustibles, solventes y vapores de combustibles.', eff: 'Algunos pueden dar mal olor y ayudan a formar ozono.' },
+    hct: { what: 'Todos los hidrocarburos medidos juntos.', src: 'Combustibles, solventes y gas natural.', eff: 'Sirve para ver el total de hidrocarburos presentes en el aire.' }
+  };
+  function renderDetail() {
+    var i = S.sel.stats;
+    $('#detail-title').textContent = 'Detalle por parámetro · ' + longDate(DAYS[i]);
+    $('#detail-note').textContent = 'Estación Centro Quintero · dato preliminar de SINCA. Es el promedio del día: pueden ocurrir peaks más altos de corta duración que este promedio no muestra. Toca un punto del gráfico para cambiar de día.';
+    var wind = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h7a2.5 2.5 0 1 1-2.5 2.5"/></svg>';
+    $('#pgrid').innerHTML = ORDER.map(function (k) {
+      var p = P[k], l = paramLevel(k, i), inf = INFO[k], note;
+      if (l != null) note = ADVICE[l]; else if (k === 'so2') note = phrase('so2', i); else note = 'Valor informativo: en esta versión no se calcula un nivel de riesgo para este parámetro.';
+      var badge = l == null ? '<span class="tag">Solo informativo</span>' : '<span class="pill ' + lvlClass(l) + '">' + lvIcon(l) + LV[l].name + ' · referencia</span>';
+      return '<article class="card pcard ' + lvlClass(l) + '"><div class="ptop"><div class="ico">' + wind + '</div>' + badge + '</div>' +
+        '<h3>' + p.name + ' (' + p.short + ')</h3><div class="pval tnum">' + fv(k, p.vals[i]) + '<small>' + p.unit + '</small></div>' +
+        '<div class="pnote">' + esc(note) + '</div>' +
+        '<div class="minis">' + [['Qué es', inf.what], ['De dónde viene', inf.src], ['Qué puede causar', inf.eff]].map(function (x) { return '<details class="mini"><summary>' + x[0] + '</summary><p>' + esc(x[1]) + '</p></details>'; }).join('') + '</div></article>';
+    }).join('');
+  }
+
+  /* ---------- estadísticas ---------- */
+  function renderStats() {
+    var worst = 0, wi = 0; P.mp10.vals.forEach(function (x, k) { if (x > worst) { worst = x; wi = k; } });
+    var mods = alertDays().length;
+    $('#figs').innerHTML =
+      '<div class="card fig"><div class="n tnum">' + S.reports.length + '</div><div class="l">reportes enviados desde este navegador</div></div>' +
+      '<div class="card fig"><div class="n tnum">' + mods + ' de ' + DAYS.length + '</div><div class="l">días con nivel Moderado o Alto esta semana</div></div>' +
+      '<div class="card fig"><div class="n tnum">' + fv('mp10', worst) + ' <span style="font-size:1rem;font-weight:500;color:var(--muted)">µg/m³</span></div><div class="l">dato más alto de la semana: polvo respirable el ' + shortDate(DAYS[wi]) + '</div></div>';
+    var sel = $('#paramsel'); if (!sel.options.length) { sel.innerHTML = ORDER.map(function (k) { return '<option value="' + k + '">' + P[k].name + ' (' + P[k].short + ')</option>'; }).join(''); }
+    sel.value = S.param;
+    var p = P[S.param];
+    $('#chart-title').innerHTML = '<h2>' + p.name + ' (' + p.short + ')</h2><p class="muted small">' + esc(p.desc) + ' Unidad: ' + p.unit + '.</p>';
+    var ch = $('#statschart'); ch.setAttribute('data-chart', S.param);
+    $('#stats-legend').innerHTML = p.refs ? '<span><span class="dot lv-good"></span>Bueno</span><span><span class="dot lv-mod"></span>Moderado</span><span><span class="dot lv-high"></span>Alto</span>' : '';
+    $('#stats-table').innerHTML = '<thead><tr><th>Fecha</th><th>Valor</th>' + (p.refs ? '<th>Nivel</th>' : '') + '</tr></thead><tbody>' + DAYS.map(function (d, k) {
+      var l = paramLevel(S.param, k); return '<tr><td>' + longDate(d) + '</td><td class="num">' + fv(S.param, p.vals[k]) + ' ' + p.unit + '</td>' + (p.refs ? '<td>' + LV[l].name + '</td>' : '') + '</tr>';
+    }).join('') + '</tbody>';
+    updateReadout('stats'); drawCharts(); renderDetail();
+  }
+
+  /* ---------- reportes ---------- */
+  function renderMine() {
+    var el = $('#mine');
+    if (!S.reports.length) { el.innerHTML = '<div class="card flat"><p>Aún no hay reportes. Sé la primera persona en reportar.</p></div>'; return; }
+    el.innerHTML = S.reports.slice().reverse().map(function (r) {
+      return '<div class="mine-item"><div class="row"><strong>' + esc(r.type) + '</strong><span class="tag">' + esc(r.zone) + '</span></div><span class="muted small">' + esc(r.whenLabel) + ' · ' + (r.anon ? 'Anónimo' : 'Con contacto') + '</span><span class="small">' + esc(r.desc) + '</span>' +
+        (r.thumb ? '<img src="' + r.thumb + '" alt="Foto del reporte" style="width:72px;height:72px;object-fit:cover;border-radius:8px;">' : '') +
+        '<div class="rowbtns"><button class="btn ghost small" data-seerep="' + r.id + '">Ver en el mapa</button><button class="btn danger small" data-del="' + r.id + '">Borrar este reporte</button></div></div>';
+    }).join('') + '<div><button class="btn ghost small" id="delall">Borrar todos mis reportes</button></div>';
+  }
+  function todayISO(off) { var d = new Date(); d.setDate(d.getDate() - off); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+  function setErr(id, msg, inputId) { var e = $('#' + id); e.textContent = msg || ''; if (inputId) { var i = $('#' + inputId); if (msg) i.setAttribute('aria-invalid', 'true'); else i.removeAttribute('aria-invalid'); } }
+  function whenValue() { var r = $('input[name="when"]:checked').value; return r; }
+
+  function processPhoto(file) {
+    setErr('e-photo', '');
+    if (!file) return;
+    if (!/^image\//.test(file.type)) { setErr('e-photo', 'Elige un archivo de imagen (JPG, PNG o WEBP).'); $('#f-photo').value = ''; return; }
+    if (file.size > 5 * 1024 * 1024) { setErr('e-photo', 'La foto pesa más de 5 MB. Elige una más liviana.'); $('#f-photo').value = ''; return; }
+    var fr = new FileReader();
+    fr.onload = function () {
+      var im = new Image();
+      im.onload = function () {
+        var m = 480, sc = Math.min(1, m / Math.max(im.width, im.height)), c = document.createElement('canvas');
+        c.width = Math.round(im.width * sc); c.height = Math.round(im.height * sc);
+        c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);
+        S.photo = c.toDataURL('image/jpeg', 0.65);
+        $('#photoimg').src = S.photo; $('#photoprev').hidden = false;
+      };
+      im.onerror = function () { setErr('e-photo', 'No pudimos leer esa foto. Prueba con otra.'); };
+      im.src = fr.result;
+    };
+    fr.readAsDataURL(file);
+  }
+
+  function validateForm() {
+    var ok = true, first = null;
+    function bad(id, msg, el, inputId) { setErr(id, msg, inputId); ok = false; if (!first) first = el; }
+    setErr('e-type', '', 'f-type'); setErr('e-zone', '', 'f-zone'); setErr('e-desc', '', 'f-desc'); setErr('e-consent', '');
+    if (!$('#f-type').value) bad('e-type', 'Elige el tipo de problema.', $('#f-type'), 'f-type');
+    if (!$('#f-zone').value) bad('e-zone', 'Elige el sector aproximado.', $('#f-zone'), 'f-zone');
+    var d = $('#f-desc').value.trim();
+    if (d.length < 15) bad('e-desc', 'Cuéntanos un poco más: faltan ' + (15 - d.length) + ' caracteres.', $('#f-desc'), 'f-desc');
+    if (!$('#f-consent').checked) bad('e-consent', 'Para guardar el reporte, marca que estás de acuerdo.', $('#f-consent'));
+    if (!ok) { setErr('e-form', 'Revisa los campos marcados para poder guardar.'); if (first) first.focus(); } else { setErr('e-form', ''); }
+    return ok;
+  }
+  function submitReport(ev) {
+    ev.preventDefault();
+    if (!validateForm()) return;
+    var anon = $('#f-anon').checked;
+    var r = { id: 'r' + Date.now(), type: $('#f-type').value, zone: $('#f-zone').value, desc: $('#f-desc').value.trim(), anon: anon, contact: anon ? '' : $('#f-contact').value.trim(), whenLabel: 'Enviado el ' + longDate(todayISO(0)), thumb: S.photo || '', at: new Date().toISOString() };
+    S.reports.push(r); save();
+    resetForm();
+    var c = $('#confirm');
+    c.style.display = 'grid'; c.hidden = false; c.style.gap = '12px';
+    $('#reportgrid').style.display = 'none';
+    c.innerHTML = '<h2>Gracias, tu reporte quedó guardado</h2><ul class="plist"><li><span>Tipo</span><strong>' + esc(r.type) + '</strong></li><li><span>Sector</span><strong>' + esc(r.zone) + '</strong></li><li><span>Fecha</span><strong>' + esc(r.whenLabel) + '</strong></li><li><span>Reporte</span><strong>' + (r.anon ? 'Anónimo' : 'Con contacto') + '</strong></li></ul>' +
+      '<p class="muted small">En este prototipo el reporte queda solo en tu navegador y no llega a ninguna autoridad. Lo puedes borrar cuando quieras desde "Tus reportes en este navegador", más abajo.</p>' +
+      '<div style="display:flex;flex-wrap:wrap;gap:10px;"><button class="btn primary" id="seemap">Ver en el mapa</button><button class="btn ghost" id="another">Hacer otro reporte</button></div>';
+    buildNav(); renderMine(); window.scrollTo(0, 0);
+    c.setAttribute('tabindex', '-1'); c.focus({ preventScroll: true });
+  }
+  function resetForm() {
+    $('#reportform').reset(); S.photo = null; $('#photoprev').hidden = true; $('#photoimg').removeAttribute('src');
+    $('#contactfield').hidden = true; $('#desc-count').textContent = 'Faltan 15 caracteres.';
+    $$('[aria-invalid]').forEach(function (e) { e.removeAttribute('aria-invalid'); });
+    ['e-type', 'e-zone', 'e-desc', 'e-consent', 'e-form', 'e-photo'].forEach(function (id) { setErr(id, ''); });
+  }
+  function backToForm() { var c = $('#confirm'); c.style.display = 'none'; c.hidden = true; $('#reportgrid').style.display = ''; window.scrollTo(0, 0); $('#t-reportar').focus(); }
+
+  /* ---------- eventos ---------- */
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    var go = t.closest('[data-go]'); if (go) { show(go.getAttribute('data-go')); return; }
+    var sr = t.closest('[data-seerep]'); if (sr) { S.selRep = sr.getAttribute('data-seerep'); S.layers.rep = true; show('mapa'); return; }
+    var pkb = t.closest('[data-peak]'); if (pkb) { S.day = Number(pkb.getAttribute('data-peak')); renderHome(); window.scrollTo(0, 0); return; }
+    var dayb = t.closest('[data-day]'); if (dayb) { S.day = Number(dayb.getAttribute('data-day')); renderHome(); return; }
+    var lay = t.closest('[data-layer]'); if (lay) { var k = lay.getAttribute('data-layer'); S.layers[k] = !S.layers[k]; renderMap(); return; }
+    var flt = t.closest('[data-filter]'); if (flt) { S.filter = flt.getAttribute('data-filter'); renderAlerts(); return; }
+    var rpt = t.closest('.rpt'); if (rpt) { S.selRep = rpt.getAttribute('data-rep'); renderMap(); $('#stationpanel').scrollIntoView({ block: 'nearest' }); return; }
+    if (t.closest('[data-closerep]')) { S.selRep = null; renderMap(); return; }
+    var stn = t.closest('.stn'); if (stn) { S.selRep = null; S.station = stn.getAttribute('data-st'); renderMap(); return; }
+    var pt = t.closest('.pt'); if (pt) { var host = pt.closest('.chart'); var which = host.getAttribute('data-sel'); S.sel[which] = Number(pt.getAttribute('data-k')); drawCharts(); updateReadout(which); if (which === 'stats') renderDetail(); return; }
+    if (t.closest('#morebtn')) { $('#sheetback').hidden = false; var f = $('#sheetback .sl'); if (f) f.focus(); return; }
+    if (t.closest('#sheetclose') || t.id === 'sheetback') { $('#sheetback').hidden = true; return; }
+    var del = t.closest('[data-del]'); if (del) { var id = del.getAttribute('data-del'); S.reports = S.reports.filter(function (r) { return r.id !== id; }); if (S.selRep === id) S.selRep = null; save(); renderMine(); buildNav(); if (S.view === 'mapa') renderMap(); return; }
+    if (t.closest('#delall2')) { S.reports = []; save(); $('#priv-count').textContent = '0'; $('#priv-msg').textContent = 'Listo: se borraron tus reportes de este navegador.'; buildNav(); return; }
+    if (t.closest('#delall')) { S.reports = []; save(); renderMine(); buildNav(); return; }
+    if (t.closest('#photodel')) { S.photo = null; $('#f-photo').value = ''; $('#photoprev').hidden = true; return; }
+    if (t.closest('#seemap')) { S.layers.rep = true; if (S.reports.length) S.selRep = S.reports[S.reports.length - 1].id; show('mapa'); return; }
+    if (t.closest('#another')) { backToForm(); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !$('#sheetback').hidden) { $('#sheetback').hidden = true; var m = $('#morebtn'); if (m) m.focus(); return; }
+    if (e.key === 'Enter' || e.key === ' ') {
+      var el = e.target.closest && e.target.closest('.pt, .stn, .rpt'); if (el) { e.preventDefault(); el.dispatchEvent(new MouseEvent('click', { bubbles: true })); }
+    }
+  });
+  $('#daysel').addEventListener('change', function (e) { S.day = Number(e.target.value); renderHome(); });
+  $('#paramsel').addEventListener('change', function (e) { S.param = e.target.value; renderStats(); });
+  $('#reportform').addEventListener('submit', submitReport);
+  $('#f-desc').addEventListener('input', function (e) { var n = e.target.value.trim().length; $('#desc-count').textContent = n >= 15 ? 'Listo, ya puedes continuar.' : 'Faltan ' + (15 - n) + ' caracteres.'; });
+  $('#f-photo').addEventListener('change', function (e) { processPhoto(e.target.files && e.target.files[0]); });
+  $('#f-anon').addEventListener('change', function (e) { $('#contactfield').hidden = e.target.checked; });
+  var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(drawCharts, 120); });
+
+    window.addEventListener('storage', function (e) {
+    if (e.key === KEY) { try { var a2 = JSON.parse(e.newValue || '[]'); S.reports = Array.isArray(a2) ? a2 : []; } catch (er) { S.reports = []; } buildNav(); if (S.view === 'mapa') renderMap(); if (S.view === 'reportar') renderMine(); if (S.view === 'estadisticas') renderStats(); }
+  });
+
+  /* ---------- zoom del mapa ---------- */
+  function applyMapMode() {
+    var mz = $('#mapzoom'), st = STNS.filter(function (x) { return x.id === S.station; })[0] || STNS[0];
+    mz.style.setProperty('--z', [1, 1.45, 2][S.zoom]);
+    mz.style.setProperty('--ox', (st.x / 640 * 100) + '%'); mz.style.setProperty('--oy', (st.y / 450 * 100) + '%');
+    $('#zin').disabled = S.zoom >= 2; $('#zout').disabled = S.zoom <= 0;
+  }
+  $('#mapbox').addEventListener('click', function (e) {
+    if (e.target.closest('#zin')) { S.zoom = Math.min(2, S.zoom + 1); applyMapMode(); return; }
+    if (e.target.closest('#zout')) { S.zoom = Math.max(0, S.zoom - 1); applyMapMode(); }
+  });
+
+  
+  /* ---------- guía rápida y tamaño de texto ---------- */
+  function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* ignorar */ } }
+  S.fs = Math.min(2, Math.max(0, Number(lsGet('ecoq.fs')) || 0));
+  function isDarkNow() { var t = document.documentElement.getAttribute('data-theme'); if (t) return t === 'dark'; return !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches); }
+  function applyTheme() {
+    var t = lsGet('ecoq.theme'); var r = document.documentElement;
+    if (t === 'dark' || t === 'light') r.setAttribute('data-theme', t); else r.removeAttribute('data-theme');
+    var d = isDarkNow(); r.classList.toggle('is-dark', d);
+    $$('.themelab').forEach(function (l) { l.textContent = d ? 'Modo claro' : 'Modo oscuro'; });
+    $$('[data-theme-toggle]').forEach(function (b) { b.setAttribute('aria-label', d ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'); });
+  }
+  applyTheme();
+  function applyFs() {
+    var r = document.documentElement; r.setAttribute('data-fs', String(S.fs)); r.style.setProperty('--fsk', String([1, 1.125, 1.25][S.fs]));
+    $$('[data-fsd]').forEach(function (b) { var d = Number(b.getAttribute('data-fsd')); b.disabled = (d < 0 && S.fs <= 0) || (d > 0 && S.fs >= 2); });
+    drawCharts();
+  }
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('[data-theme-toggle]')) { lsSet('ecoq.theme', isDarkNow() ? 'light' : 'dark'); applyTheme(); drawCharts(); return; }
+    var f = e.target.closest('[data-fsd]'); if (f) { S.fs = Math.min(2, Math.max(0, S.fs + Number(f.getAttribute('data-fsd')))); lsSet('ecoq.fs', String(S.fs)); applyFs(); return; }
+    if (e.target.closest('#introok')) { $('#intro').hidden = true; lsSet('ecoq.intro', '1'); return; }
+    if (e.target.closest('#introopen')) { $('#intro').hidden = false; window.scrollTo(0, 0); $('#intro').scrollIntoView({ block: 'start' }); }
+  });
+  $('#intro').hidden = lsGet('ecoq.intro') === '1';
+  $('#sugsave').addEventListener('click', function () {
+    var v = $('#f-sug').value.trim(), m = $('#sug-msg');
+    if (!v) { m.textContent = 'Escribe tu sugerencia antes de guardar.'; $('#f-sug').focus(); return; }
+    try { var a = JSON.parse(lsGet('ecoq.sug') || '[]'); a.push({ t: v, at: new Date().toISOString() }); lsSet('ecoq.sug', JSON.stringify(a)); } catch (e) { /* ignorar */ }
+    $('#f-sug').value = ''; m.textContent = 'Gracias. Tu sugerencia quedó guardada solo en este navegador.';
+  });
+  applyFs();
+
+  /* ---------- inicio de la página ---------- */
+  buildNav(); renderHome();
+  var h = (location.hash || '').replace('#', ''), ok = NAV.some(function (n) { return n.id === h; });
+  show(ok ? h : 'inicio');
+  if ('fonts' in document) { document.fonts.ready.then(drawCharts); }
+})();
+</script>
